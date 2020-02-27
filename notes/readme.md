@@ -1,15 +1,24 @@
+---
+title: readme.md
+---
+
+### Header/intro
+
+```md
 <div align="center">
   <img src="https://brand.zander.wtf/Avatar.png" width="140">
   <h1>
-    notes.zander.wtf
+    Package name
   </h1>
 
-> Notes on code. My memory bank.
+> Package description
 
 </div>
+```
 
-This site uses [gatsby-theme-code-notes](https://github.com/mrmartineau/gatsby-theme-code-notes). 
+### Footer
 
+```md
 ---
 
 ## License
@@ -17,3 +26,4 @@ This site uses [gatsby-theme-code-notes](https://github.com/mrmartineau/gatsby-t
 [MIT](https://choosealicense.com/licenses/mit/) © [Zander Martineau](https://zander.wtf)
 
 > Made by [Zander ⚡](https://github.com/mrmartineau/)
+```

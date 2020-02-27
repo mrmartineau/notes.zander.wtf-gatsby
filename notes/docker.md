@@ -56,3 +56,56 @@ docker rm -f (docker ps -aq)
 # browse running container files
 docker exec -it $containerId sh
 ```
+
+## Using private npm packages
+
+[Securely using .npmrc files in Docker images](https://www.alexandraulsh.com/2018/06/25/docker-npmrc-security/)
+
+Here's an example of the above
+
+```docker
+# Multi-stage build info & npm security
+# from https://www.alexandraulsh.com/2018/06/25/docker-npmrc-security/
+
+# First build
+FROM node:13.2.0 AS build
+ENV NPM_CONFIG_LOGLEVEL info
+WORKDIR /usr/src/app
+ARG NPM_TOKEN
+
+RUN mkdir -p /usr/src/app
+COPY . .
+RUN echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc && \
+    yarn install && \
+    yarn build && \
+    yarn test && \
+    yarn storybook:build && \
+    yarn install --production && \
+    rm -f .npmrc \
+    rm -rf .git
+
+
+# Second build
+FROM node:13.2.0-alpine
+WORKDIR /usr/src/app
+
+EXPOSE 8080
+COPY --from=build /usr/src/app .
+
+ENTRYPOINT ["yarn", "start"]
+```
+
+Then you would run the build like so:
+
+```diff
+docker build -t mrmartineau/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} \
++               --build-arg NPM_TOKEN=${NPM_TOKEN} \
+```
+
+The above extract is from one project's CircleCI config.
+
+This is how you would run it locally
+
+```sh
+docker build . -f dockerfile -t kiss --build-arg NPM_TOKEN=9e012519-aba7-4372-8381-abcdefghi
+```

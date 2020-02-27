@@ -99,3 +99,9 @@ query MyQuery {
   }
 }
 ```
+
+## Misc
+
+[SEO component](https://github.com/jlengstorf/gatsby-theme-jason-blog/blob/58e67d9e5c1691654185ebdffdc6f01ac7cbb791/src/components/SEO/SEO.js)
+
+[Schema.org component](https://github.com/jlengstorf/gatsby-theme-jason-blog/blob/58e67d9e5c1691654185ebdffdc6f01ac7cbb791/src/components/SEO/SchemaOrg.js)

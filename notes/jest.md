@@ -76,3 +76,29 @@ fireEvent.click(getByText(/Click to increase/))
 // See https://github.com/jest-community/snapshot-diff
 expect(firstRender).toMatchDiffSnapshot(asFragment())
 ```
+
+### Throw
+
+```js
+import { formatDate } from './formatDate'
+
+describe('Given a formatDate util', () => {
+  describe('when passing a valid 8-digit date string', () => {
+    test('it should return a valid ISO formatted date string', () => {
+      expect(formatDate('19790118')).toBe('1979-01-18T00:00:00.000Z')
+    })
+  })
+
+  describe('when passing an invalid string', () => {
+    test('it should throw', () => {
+      expect(() => formatDate('197901180')).toThrow(
+        'Date string wrong format/length'
+      )
+
+      expect(() => formatDate('abcdefgh')).toThrow(
+        'Date string must be only digits'
+      )
+    })
+  })
+})
+```
