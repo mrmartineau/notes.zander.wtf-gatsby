@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Code notes',
-    description: 'Code notes',
+    title: 'notes.zander.wtf',
+    description: 'notes.zander.wtf',
     keywords: [],
     author: 'Zander'
   },
