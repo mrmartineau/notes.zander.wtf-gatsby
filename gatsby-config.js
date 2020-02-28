@@ -8,7 +8,12 @@ module.exports = {
   plugins: [
     {
       resolve: 'gatsby-theme-code-notes',
-      options: { contentPath: 'notes', basePath: '/' }
+      options: {
+        contentPath: 'notes',
+        basePath: '/',
+        gitRepoContentPath:
+          'https://github.com/mrmartineau/notes.zander.wtf/tree/master/notes/'
+      }
     }
   ]
 }

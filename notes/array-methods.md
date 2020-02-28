@@ -14,7 +14,7 @@ All array methods iterate in what is traditionally called "left to right" - more
 
 ---
 
-###`forEach`:
+### `forEach`:
 
 - _callback answers_: here’s an item. do something nutty with it, i don't care what.
 - _callback gets these arguments_: `item`, `index`, `list`
