@@ -12,7 +12,8 @@ module.exports = {
         contentPath: 'notes',
         basePath: '/',
         gitRepoContentPath:
-          'https://github.com/mrmartineau/notes.zander.wtf/tree/master/notes/'
+          'https://github.com/mrmartineau/notes.zander.wtf/tree/master/notes/',
+        showThemeInfo: true
       }
     }
   ]
