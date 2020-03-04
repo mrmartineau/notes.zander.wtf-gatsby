@@ -5,9 +5,12 @@ tags:
   - devops
 ---
 
-### Dockerfile examples
+## Best practices
 
-[Dockerfile best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+- [Node Dockerfile best practices](https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md)
+- [Dockerfile best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+
+## Dockerfile examples
 
 ```docker
 FROM node:12.4.0-alpine
@@ -32,13 +35,13 @@ docker build .
 
 # or
 
-docker build -t $yourTagName .
+docker build -t yourTagName .
 ```
 
 ### Run a Dockerfile locally
 
 ```docker
-docker run -d -p 1717:1717 $yourTagName
+docker run -p 1717:1717 yourTagName
 ```
 
 ### Docker commands
