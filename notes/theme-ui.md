@@ -29,3 +29,17 @@ export const MyComponent = () => {
   return <pre>{JSON.stringify(theme, null, 2)}</pre>
 }
 ```
+
+## [Pseudo elements](https://github.com/system-ui/theme-ui/blob/master/packages/docs/src/pages/guides/object-styles.mdx#pseudo-elements)
+
+```js
+{
+  "::before": {
+    content: '""',
+    display: 'block',
+    width: 32,
+    height: 32,
+    backgroundColor: 'tomato',
+  }
+}
+```
