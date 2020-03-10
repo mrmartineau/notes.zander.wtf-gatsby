@@ -142,6 +142,12 @@ info "yalc@1.0.0-pre.27" has binaries:
 ❯ npm -g ls --depth=0
 ```
 
+### Flush DNS cache
+
+```
+sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder
+```
+
 ## Custom packages
 
 ### Autojump
