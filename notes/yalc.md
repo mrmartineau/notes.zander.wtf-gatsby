@@ -4,24 +4,30 @@ tags:
   - javascript
 ---
 
+[Yalc repo](https://github.com/whitecolor/yalc)
+
 Say we have two repos:
 
-`fx-holiday-app` which depends on `@fairfx/fuji`
+`repo-a` which depends on npm `package-a`
 
-## Step 1
+### Step 1
 
-Run `yalc publish` in the `@fairfx/fuji`
+Run `yalc publish` in the `package-a` repo
 
-## Step 2
+### Step 2
 
-Run `yalc add @fairfx/fuji` in the `fx-holiday-app`
+Run `yalc add package-a` in the `repo-a` repo
 
-## Step 3
+### Step 3
 
-Run `yarn` in `fx-holiday-app`
+Run `yarn` in `repo-a`
 
-## Step 4
+### Step 4
 
-Run `yalc push` whenever you update `@fairfx/fuji`
+Whenever you update `package-a`, run `yalc push` in the `package-a`, and run `yalc add package-a` in the `repo-a` repo
 
-You may need to run `yarn build && yarn push` if you package needs building first.
+You may need to run `yarn build && yalc push` if `package-a` needs building first.
+
+### Revert
+
+When you're done testing with Yalc, run `yalc remove --all` to remove all the yalced packages from `repo-a`
