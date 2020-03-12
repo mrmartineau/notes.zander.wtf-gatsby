@@ -30,7 +30,11 @@ export const MyComponent = () => {
 }
 ```
 
-## [Pseudo elements](https://github.com/system-ui/theme-ui/blob/master/packages/docs/src/pages/guides/object-styles.mdx#pseudo-elements)
+## Object styles
+
+https://emotion.sh/docs/object-styles
+
+### [Pseudo elements](https://github.com/system-ui/theme-ui/blob/master/packages/docs/src/pages/guides/object-styles.mdx#pseudo-elements)
 
 ```js
 {

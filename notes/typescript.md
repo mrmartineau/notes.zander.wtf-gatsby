@@ -6,6 +6,7 @@ tags:
 
 - [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/)
 - [React TypeScript cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet)
+- The tsconfig Schema: http://json.schemastore.org/tsconfig
 
 ## Built-in types
 
