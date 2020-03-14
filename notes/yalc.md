@@ -22,7 +22,7 @@ Run `yalc add package-a` in the `repo-a` repo
 
 Run `yarn` in `repo-a`
 
-### Step 4
+### Step 4
 
 Whenever you update `package-a`, run `yalc push` in the `package-a`, and run `yalc add package-a` in the `repo-a` repo
 
