@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'notes.zander.wtf',
-    description: 'notes.zander.wtf',
+    description: 'Notes on code. My memory bank.',
     keywords: [],
     author: 'Zander'
   },
@@ -13,7 +13,8 @@ module.exports = {
         basePath: '/',
         gitRepoContentPath:
           'https://github.com/mrmartineau/notes.zander.wtf/tree/master/notes/',
-        showThemeInfo: true
+        showThemeInfo: true,
+        showDescriptionInSidebar: true
       }
     }
   ]

@@ -6,7 +6,8 @@ tags:
 
 ```js
 var mkdirp = require('mkdirp')
-mkdirp('/tmp/some/path/foo', function(err) {
+
+mkdirp('/tmp/some/path/foo', err => {
   // path exists unless there was an error
 })
 ```
