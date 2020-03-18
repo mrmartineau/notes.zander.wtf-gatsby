@@ -47,7 +47,7 @@ export const image: FunctionComponent = () => <ArticlePage />
 ## Config
 
 ```js
-// 
+// main.js
 module.exports = {
   stories: ['../src/**/*.stor(ies|y).(tsx|ts|js|jsx|mdx)'],
   addons: [
@@ -70,6 +70,40 @@ module.exports = {
     return config
   }
 }
+```
+
+```js
+//preview.js
+import { addDecorator, addParameters } from '@storybook/react'
+import { withKnobs } from '@storybook/addon-knobs'
+import { withA11y } from '@storybook/addon-a11y'
+import { Global } from '@emotion/core'
+import { theme } from '@curve-technology/web-ds'
+import React, { Fragment } from 'react'
+import { withThemeProvider } from 'storybook-addon-color-mode'
+import { withPaddings } from 'storybook-addon-paddings'
+
+addParameters({
+  colorMode: {
+    modes: {
+      dark: {
+        name: 'Dark'
+      }
+    },
+    defaultMode: 'default'
+  }
+})
+addParameters({
+  paddings: [
+    { name: 'Small', value: '16px' },
+    { name: 'Medium', value: '32px', default: true },
+    { name: 'Large', value: '64px' }
+  ]
+})
+addDecorator(withPaddings)
+addDecorator(withA11y)
+addDecorator(withKnobs)
+addDecorator(withThemeProvider(theme))
 ```
 
 ### Useful addons

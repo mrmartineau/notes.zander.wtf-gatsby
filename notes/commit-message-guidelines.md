@@ -26,13 +26,11 @@ The footer should contain a [closing reference to an issue](https://help.github.
 
 Samples: (even more [samples](https://github.com/angular/angular/commits/master))
 
-```
-docs(changelog): update changelog to beta.5
-
-fix(release): need to depend on latest rxjs and zone.js
-```
-
-The version in our package.json gets copied to the one we publish, and users need the latest of these.
+| Commit message                                                                                                                                                                                   | Release type               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------- |
+| `fix(pencil): stop graphite breaking when too much pressure applied`                                                                                                                             | Patch Release              |
+| `feat(pencil): add 'graphiteWidth' option`                                                                                                                                                       | ~~Minor~~ Feature Release  |
+| `perf(pencil): remove graphiteWidth option`<br><br>`BREAKING CHANGE: The graphiteWidth option has been removed.`<br>`The default graphite width of 10mm is always used for performance reasons.` | ~~Major~~ Breaking Release |
 
 **Revert**
 

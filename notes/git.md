@@ -25,7 +25,7 @@ Same as above but exclude master and develop branches
 git branch --merged | egrep -v "(^\*|master|develop)"
 ```
 
-### Deleting
+### Deleting branches
 
 ```sh
 git branch -d branch_name
@@ -50,6 +50,26 @@ To retrieve the git commit hashes use this:
 ```sh
 git log --oneline
 ```
+
+## Tags
+
+```sh
+# list all git tags
+git tag -l
+git tag --list
+
+# create a git tag
+git tag v1.9.2
+
+# remove a git tag
+git tag -d v1.9.2
+git tag --delete v1.9.2
+
+# push all tags to remote
+git push --follow-tags origin master
+```
+
+---
 
 [gitsheet.wtf](https://gitsheet.wtf/)
 
