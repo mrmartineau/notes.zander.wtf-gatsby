@@ -6,7 +6,7 @@ tags:
 
 We have very precise rules over how our git commit messages can be formatted. This leads to **more readable messages** that are easy to follow when looking through the **project history**. But also, we use the git commit messages to **generate the Angular change log**.
 
-**Commit Message Format**
+## Commit Message Format
 
 Each commit message consists of a **header**, a **body** and a **footer**. The header has a special format that includes a **type**, a **scope** and a **subject**:
 
@@ -32,11 +32,11 @@ Samples: (even more [samples](https://github.com/angular/angular/commits/master)
 | `feat(pencil): add 'graphiteWidth' option`                                                                                                                                                          | ~~Minor~~ Feature Release  |
 | `perf(pencil): remove graphiteWidth option`<br/><br/>`BREAKING CHANGE: The graphiteWidth option has been removed.`<br/>`The default graphite width of 10mm is always used for performance reasons.` | ~~Major~~ Breaking Release |
 
-**Revert**
+### Revert
 
 If the commit reverts a previous commit, it should begin with revert:, followed by the header of the reverted commit. In the body it should say: This reverts commit `hash`., where the hash is the SHA of the commit being reverted.
 
-**Type**
+### Type
 
 Must be one of the following:
 
@@ -50,13 +50,13 @@ Must be one of the following:
 - **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 - **test**: Adding missing tests or correcting existing tests
 
-**Scope**
+### Scope
 
 The scope should be the name of the npm package affected (as perceived by the person reading the changelog generated from commit messages.
 
 The following is the list of supported scopes:
 
-**Subject**
+### Subject
 
 The subject contains a succinct description of the change:
 
@@ -64,11 +64,11 @@ The subject contains a succinct description of the change:
 - don't capitalize the first letter
 - no dot (.) at the end
 
-**Body**
+### Body
 
 Just as in the **subject**, use the imperative, present tense: "change" not "changed" nor "changes". The body should include the motivation for the change and contrast this with previous behavior.
 
-**Footer**
+### Footer
 
 The footer should contain any information about **Breaking Changes** and is also the place to reference GitHub issues that this commit **Closes**.
 

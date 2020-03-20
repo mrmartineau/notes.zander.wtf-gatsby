@@ -321,3 +321,5 @@ Safely\* install packages with npm or yarn by auditing them as part of your inst
 # use
 ❯ youtube-dl d2qfa3tlgH8
 ```
+
+https://blog.balthazar-rouberol.com/text-processing-in-the-shell
