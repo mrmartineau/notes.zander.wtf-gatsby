@@ -1,10 +1,10 @@
 ---
 title: Redux
 tags:
-  - javascript
-  - typescript
   - react
 ---
+
+## Basic example
 
 ```jsx
 // index.ts
@@ -53,4 +53,12 @@ const mapStateToProps = appState => ({
 // building an object, as long as we're OK with the
 // props being named the same thing
 const mapDispatchToProps = { clearQuery: doClearQuery }
+```
+
+## Selectors
+
+```js
+export const getSignedInStatus = user => user.isSignedIn
+export const getFullName = user => `${user.firstName} ${user.lastName}`
+export const getUsername = user => user.username
 ```
