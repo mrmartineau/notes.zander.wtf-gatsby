@@ -18,8 +18,7 @@ https://github.com/afitiskin/redux-saga-routines
 ```js
 import { createRoutine } from 'redux-saga-routines'
 
-// creating routine
-const routine = createRoutine('ACTION_TYPE_PREFIX')
+const fetchData = createRoutine('FETCH_DATA')
 ```
 
 ### Access the action types
@@ -45,6 +44,7 @@ routine.fulfill(payload) === { type: 'ACTION_TYPE_PREFIX/FULFILL', payload }
 ### Reducer
 
 ```js
+import produce from 'immer'
 import { fetchData } from './routines'
 
 const initialState = {
@@ -53,30 +53,53 @@ const initialState = {
   error: null
 }
 
-export default function exampleReducer(state = initialState, action) {
-  switch (action.type) {
-    case fetchData.TRIGGER:
-      return {
-        ...state,
-        loading: true
-      }
-    case fetchData.SUCCESS:
-      return {
-        ...state,
-        data: action.payload
-      }
-    case fetchData.FAILURE:
-      return {
-        ...state,
-        error: action.payload
-      }
-    case fetchData.FULFILL:
-      return {
-        ...state,
-        loading: false
-      }
-    default:
-      return state
+export const exampleReducer = (
+  state = initialState,
+  action: ExampleActionInterface
+) =>
+  produce(state, draft => {
+    switch (action.type) {
+      case fetchData.REQUEST:
+        draft.loading = true
+        break
+      case fetchData.SUCCESS:
+        draft.loading = false
+        draft.data = action.payload
+        break
+      case fetchData.FAILURE:
+        draft.loading = false
+        draft.error = true
+        break
+    }
+  })
+```
+
+### Sagas
+
+```js
+export function* fetchDataRequest(
+  { payload },
+) {
+  const { fromDate, toDate } = payload;
+  try {
+    const walletId = yield select(getWalletId);
+    const { data } = yield call([walletAdapter, 'requestPendingTransactions'], {
+      walletId,
+      fromDate,
+      toDate,
+    });
+
+    yield put(getPendingTransactions.success(transformTransactionValues(data)));
+
+  } catch (error) {
+    yield put(getPendingTransactions.failure(error));
   }
+}
+
+export function* walletSagas() {
+  yield takeEvery(
+    getPendingTransactions.REQUEST,
+    getPendingTransactionsRequest as any
+  );
 }
 ```

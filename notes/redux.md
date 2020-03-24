@@ -12,8 +12,6 @@ import { connect } from 'react-redux'
 
 import { Component, mapStateToProps, mapDispatchToProps } from './Component'
 
-// Now we'll pass both select and actions here
-// and return our wrapped component.
 export const ConnectedComponent = connect(
   mapStateToProps,
   mapDispatchToProps

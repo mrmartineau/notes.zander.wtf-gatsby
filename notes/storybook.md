@@ -46,6 +46,8 @@ export const image: FunctionComponent = () => <ArticlePage />
 
 ## Config
 
+[Declarative Storybook configuration](https://medium.com/storybookjs/declarative-storybook-configuration-49912f77b78)
+
 ```js
 // main.js
 module.exports = {
@@ -73,7 +75,7 @@ module.exports = {
 ```
 
 ```js
-//preview.js
+// preview.js
 import { addDecorator, addParameters } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { withA11y } from '@storybook/addon-a11y'
@@ -115,3 +117,5 @@ addDecorator(withThemeProvider(theme))
 ```sh
 yarn add --dev @storybook/preset-typescript @storybook/addon-docs/preset @storybook/addon-links/register @storybook/addon-actions/register @storybook/addon-backgrounds/register @storybook/addon-a11y/register @storybook/addon-knobs/register @storybook/addon-viewport/register storybook-addon-color-mode/register storybook-addon-paddings story-description-loader
 ```
+
+With Gatsby: https://www.gatsbyjs.org/docs/visual-testing-with-storybook/

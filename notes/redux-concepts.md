@@ -6,8 +6,6 @@ tags:
 
 > Notes made from reading the excellent: [Human Redux](https://reduxbook.com/) by [Henrik Joretag](https://joreteg.com/)
 
-# Redux
-
 ## Actions
 
 “Actions are like news reports. Only report what matters; only report the facts.”
