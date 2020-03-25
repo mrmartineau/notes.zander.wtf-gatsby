@@ -23,31 +23,7 @@ describe('Given a xxx', () => {
 })
 ```
 
-## React Testing Library
 
-```js
-import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
-
-import { Button } from './Button'
-
-describe('Given a Button component', () => {
-  describe('when it is rendered', () => {
-    test('should have the text `This is a button`', () => {
-      // Arrange
-      const { getByText } = render(<Button>This is a button</Button>)
-
-      // Act
-      fireEvent.click(getByText('This is a button'))
-
-      // Assert
-      expect(getByText('This is a button')).toHaveTextContent(
-        'This is a button'
-      )
-    })
-  })
-})
-```
 
 ### Snapshot test
 
