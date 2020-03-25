@@ -2,7 +2,9 @@
 title: Fixed-width numbers
 tags:
   - css
----```css
+---
+
+```css
 .yourClass {
   font-variant-numeric: tabular-nums;
 }
