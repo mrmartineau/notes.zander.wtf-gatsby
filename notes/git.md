@@ -74,6 +74,8 @@ git push --follow-tags origin master
 
 [gitexplorer.com](https://gitexplorer.com/)
 
+[Setting Up Git Identities](https://www.micah.soy/posts/setting-up-git-identities/)
+
 ### Branching strategies
 
 - [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/)
