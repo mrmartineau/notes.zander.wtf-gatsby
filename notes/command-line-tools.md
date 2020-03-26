@@ -3,6 +3,7 @@ title: Command line tools
 date: 2019-11-03
 tags:
   - cli
+emoji: 📟
 ---
 
 ## Keyboard shortcuts

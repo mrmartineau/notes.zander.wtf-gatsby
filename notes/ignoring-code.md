@@ -5,6 +5,7 @@ tags:
   - html
   - javascript
   - typescript
+emoji: 🙅‍♀️
 ---
 
 ## ESlint

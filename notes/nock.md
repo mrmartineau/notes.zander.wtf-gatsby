@@ -3,6 +3,7 @@ title: Nock
 tags:
   - testing
   - javascript
+emoji: 🧪
 ---
 
 ```js

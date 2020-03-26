@@ -2,6 +2,7 @@
 title: CircleCI
 tags:
   - devops
+emoji: ⭕️
 ---
 
 ## Basic example

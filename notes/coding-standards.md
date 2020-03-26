@@ -1,5 +1,6 @@
 ---
 title: Coding standards
+emoji: ✅
 ---
 
 ## Naming Conventions

@@ -2,6 +2,7 @@
 title: '@font-face'
 tags:
   - css
+emoji: 📰
 ---
 
 ## Modern browsers

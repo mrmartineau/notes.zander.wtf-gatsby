@@ -3,6 +3,7 @@ title: Styled Components
 tags:
   - react
   - typescript
+emoji: 💅
 ---
 
 ## Basic component

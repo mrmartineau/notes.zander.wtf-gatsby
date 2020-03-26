@@ -3,6 +3,7 @@ title: Jest global mocks
 tags:
   - javascript
   - testing
+emoji: 🧪
 ---
 
 ## Some useful mocks
@@ -25,7 +26,7 @@ if (typeof window != 'undefined') {
       media: query,
       onchange: null,
       addListener: jest.fn(),
-      removeListener: jest.fn(),
+      removeListener: jest.fn()
     }
   })
 }
@@ -40,7 +41,7 @@ jest.mock('next/router', () => {
   return {
     push: () => {},
     replace: () => {},
-    prefetch: () => {},
+    prefetch: () => {}
   }
 })
 
@@ -51,11 +52,11 @@ import config from 'config'
 const mockPublicConfigData = {
   env: config.get('env'),
   base: config.get('base'),
-  client: config.get('client'),
+  client: config.get('client')
 }
 
 jest.mock('next/config', () => () => ({
-  publicRuntimeConfig: mockPublicConfigData,
+  publicRuntimeConfig: mockPublicConfigData
 }))
 
 global.MutationObserver = class {

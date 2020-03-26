@@ -2,6 +2,7 @@
 title: Picture
 tags:
   - html
+emoji: 🖼
 ---
 
 ## Webp + png usage

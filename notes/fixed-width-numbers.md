@@ -2,6 +2,7 @@
 title: Fixed-width numbers
 tags:
   - css
+emoji: 🔢
 ---
 
 ```css

@@ -2,6 +2,7 @@
 title: Remove array duplicated
 tags:
   - javascript
+emoji: 🚚
 ---
 
 ## Using `Set`

@@ -4,6 +4,7 @@ tags:
   - javascript
   - react
   - testing
+emoji: 🧪
 ---
 
 ## Basic test skeleton

@@ -2,6 +2,7 @@
 title: Lazy load CSS
 tags:
   - css
+emoji: 🥱
 ---
 
 From https://www.filamentgroup.com/lab/load-css-simpler/

@@ -2,6 +2,7 @@
 title: Postman.io
 tags:
   - javascript
+emoji: 📨
 ---
 
 ## Save an env var

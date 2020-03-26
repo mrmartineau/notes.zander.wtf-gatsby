@@ -1,5 +1,6 @@
 ---
 title: Cleanup / optimise computer
+emoji: 🧼
 ---
 
 - https://medium.freecodecamp.org/how-to-free-up-space-on-your-developer-mac-f542f66ddfb

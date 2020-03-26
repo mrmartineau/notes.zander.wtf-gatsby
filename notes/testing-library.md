@@ -2,6 +2,7 @@
 title: Testing library
 tags:
   - testing
+emoji: 🧪
 ---
 
 ## DOM

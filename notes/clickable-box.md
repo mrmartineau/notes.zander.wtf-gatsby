@@ -4,6 +4,7 @@ tags:
   - javascript
   - react
 source: https://github.com/danoc/clickable-box
+emoji: 📦
 ---
 
 ```jsx

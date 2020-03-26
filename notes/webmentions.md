@@ -3,6 +3,7 @@ title: Webmentions
 tags:
   - javascript
   - html
+emoji: 🗣
 ---
 
 ## Go to webmention.io

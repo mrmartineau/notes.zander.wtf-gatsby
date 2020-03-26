@@ -2,6 +2,7 @@
 title: Mix blend mode
 tags:
   - css
+emoji: 🥣
 ---
 
 ```

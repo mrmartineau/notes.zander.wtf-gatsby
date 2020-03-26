@@ -2,6 +2,7 @@
 title: Favicons
 tags:
   - html
+emoji: 👍
 ---
 
 ```html

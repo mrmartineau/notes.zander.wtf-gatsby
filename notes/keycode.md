@@ -2,6 +2,7 @@
 title: Keycode
 tags:
   - javascript
+emoji: 🔑
 ---
 
 ```js

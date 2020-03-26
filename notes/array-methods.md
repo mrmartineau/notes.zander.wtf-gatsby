@@ -2,6 +2,7 @@
 title: Array methods summarised
 tags:
   - javascript
+emoji: 
 ---
 
 ## Intro

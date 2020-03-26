@@ -2,6 +2,7 @@
 title: Security
 tags:
   - node
+emoji: 👮‍♂️
 ---
 
 [OWASP Top Ten](https://owasp.org/www-project-top-ten/)

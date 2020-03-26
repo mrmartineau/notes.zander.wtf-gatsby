@@ -1,5 +1,6 @@
 ---
 title: Create local self-signed certificate
+emoji: 📜
 ---
 
 Run this then follow the instructions

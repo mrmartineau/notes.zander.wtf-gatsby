@@ -2,6 +2,7 @@
 title: CSS Filters
 tags:
   - css
+emoji: 🕶
 ---
 
 ```css

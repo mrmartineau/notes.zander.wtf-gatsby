@@ -2,6 +2,7 @@
 title: Storybook
 tags:
   - testing
+emoji: 📖
 ---
 
 ## Stories

@@ -2,6 +2,7 @@
 title: Theme UI
 tags:
   - react
+emoji: 🎨
 ---
 
 ## Theme spec

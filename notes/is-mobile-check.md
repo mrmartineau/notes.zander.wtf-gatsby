@@ -2,6 +2,7 @@
 title: Is mobile check
 tags:
   - javascript
+emoji: 📱
 ---
 
 ```js
