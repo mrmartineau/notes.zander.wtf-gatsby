@@ -5,7 +5,7 @@ tags:
 emoji: 🥣
 ---
 
-```
+```css
 .invert-everything-behind {
   mix-blend-mode: exclusion;
 }
