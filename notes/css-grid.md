@@ -1,5 +1,6 @@
 ---
 title: CSS Grid
+emoji: 🍱
 tags:
   - css
 ---

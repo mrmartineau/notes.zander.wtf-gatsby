@@ -1,5 +1,6 @@
 ---
 title: Classes
+emoji: 🕺
 tags:
   - javascript
 ---
