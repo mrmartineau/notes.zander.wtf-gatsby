@@ -3,6 +3,8 @@ title: Coding standards
 emoji: ✅
 ---
 
+#### toc
+
 ## Naming Conventions
 
 The objective of this document is to help when naming things and make the codebase consistent and easier to read.
@@ -53,21 +55,28 @@ The objective of this document is to help when naming things and make the codeba
 
 #### Function Component
 
-```
-import React, { FunctionComponent } from 'react';
+```jsx
+import React, { FunctionComponent } from 'react'
 
-const DescriptiveComponentName:FunctionComponent<IDescriptiveComponentNameProps> = (props) => {
-  ...
+const DescriptiveComponentName: FunctionComponent<IDescriptiveComponentNameProps> = (
+  props
+) => {
+  return ()
 }
 ```
 
 #### Class Component
 
-```
-import React, { Component } from 'react';
+```jsx
+import React, { Component } from 'react'
 
-class DescriptiveComponentName<IDescriptiveComponentNameProps,IDescriptiveComponentNameState> extends Component {
-  ...
+class DescriptiveComponentName<
+  IDescriptiveComponentNameProps,
+  IDescriptiveComponentNameState
+> extends Component {
+  render () {
+    return ()
+  }
 }
 ```
 
@@ -116,11 +125,11 @@ Use nested spread syntax when appropriate. Code should be readable, don't use ne
 
 ```tsx
 class MyComponent extends Component {
-
   public render() {
-    const { myProp, nestedProps:{ myNestedProp } } = this.props;
-
-    ...
+    const {
+      myProp,
+      nestedProps: { myNestedProp },
+    } = this.props
   }
 }
 ```
@@ -129,12 +138,9 @@ class MyComponent extends Component {
 
 ```tsx
 class MyComponent extends Component {
-
   public render() {
-    const { myProp, nestedProps } = this.props;
-    const { myNestedProp } = nestedProps;
-
-    ...
+    const { myProp, nestedProps } = this.props
+    const { myNestedProp } = nestedProps
   }
 }
 ```
@@ -156,8 +162,6 @@ class MyComponent extends Component {
 These rules **must** be followed by all team members in order to have a **consistent** and **well structured** codebase.
 
 #### Pages
-
-The purpose of a page is to call the CMS and pass any content retrieved from there as props.
 
 ```
 /src/client/pages
