@@ -65,8 +65,8 @@ This feature is already widely supported in browsers, and has three possible val
 
 <a href="http://caniuse.com/#feat=prefers-color-scheme">
   <picture>
-    <source type="image/webp" srcset="https://caniuse.bitsofco.de/image/prefers-color-scheme.webp">
-    <img src="https://caniuse.bitsofco.de/image/prefers-color-scheme.png" alt="Data on support for the prefers-color-scheme feature across the major browsers from caniuse.com">
+    <source type="image/webp" srcset="https://caniuse.bitsofco.de/image/prefers-color-scheme.webp"/>
+    <img src="https://caniuse.bitsofco.de/image/prefers-color-scheme.png" alt="Data on support for the prefers-color-scheme feature across the major browsers from caniuse.com"/>
   </picture>
 </a>
 
@@ -102,8 +102,8 @@ Browser support is pretty good. The value is boolean, so `no-preference` or `red
 
 <a href="http://caniuse.com/#feat=prefers-reduced-motion">
 <picture>
-<source type="image/webp" srcset="https://caniuse.bitsofco.de/image/prefers-reduced-motion.webp">
-<img src="https://caniuse.bitsofco.de/image/prefers-reduced-motion.png" alt="Data on support for the prefers-reduced-motion feature across the major browsers from caniuse.com">
+<source type="image/webp" srcset="https://caniuse.bitsofco.de/image/prefers-reduced-motion.webp"/>
+<img src="https://caniuse.bitsofco.de/image/prefers-reduced-motion.png" alt="Data on support for the prefers-reduced-motion feature across the major browsers from caniuse.com"/>
 </picture>
 </a>
 
