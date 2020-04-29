@@ -1,5 +1,5 @@
 ---
-title: Remove array duplicated
+title: Remove array duplicates
 tags:
   - javascript
 emoji: 🚚
@@ -15,7 +15,7 @@ const uniqueSet = new Set(array)
 // Set { '🐑', 1, 2, 3 }
 
 // Step 2
-const backToArray = [...new Set(array)]
+const backToArray = [...uniqueSet]
 // ['🐑', 1, 2, 3]
 
 // or Step 1
