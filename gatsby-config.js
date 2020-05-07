@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: 'notes.zander.wtf',
-    description: 'Notes on code. My memory bank.',
+    description: `Notes on code. My memory bank, by Zander Martineau.`,
     keywords: [],
-    author: 'Zander'
+    author: 'Zander',
   },
   plugins: [
     {
@@ -14,8 +14,8 @@ module.exports = {
         gitRepoContentPath:
           'https://github.com/mrmartineau/notes.zander.wtf/tree/master/notes/',
         showThemeInfo: true,
-        showDescriptionInSidebar: true
-      }
+        showDescriptionInSidebar: true,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -27,14 +27,14 @@ module.exports = {
         background_color: `hsl(210, 38%, 95%)`,
         theme_color: `hsl(345, 100%, 69%)`,
         display: `standalone`,
-        icon: `static/logo.png`
-      }
+        icon: `static/logo.png`,
+      },
     },
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: [`/*`, `/tag/*`]
-      }
-    }
-  ]
+        precachePages: [`/*`, `/tag/*`],
+      },
+    },
+  ],
 }

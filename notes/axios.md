@@ -1,8 +1,9 @@
 ---
 title: Axios
-emoji: 👌
+emoji: 🐕
 tags:
   - javascript
+link: https://github.com/axios/axios
 ---
 
 ## POST request
@@ -10,18 +11,16 @@ tags:
 ```js
 const createCurveAccountResponse = await axios({
   method: 'POST',
-  url: `${process.env.CURVE_API_BASE_PATH}/v2/signup/kiss`,
-  data: createAccountRequestData,
-  headers: {
-    authorization: process.env.CURVE_USER_AUTH_TOKEN,
-  },
+  url: `https://path.to/endpoint`,
+  data: {},
+  headers: {},
 })
 ```
 
 ## Handling errors
 
 ```js
-axios.get('/user/12345').catch(function(error) {
+axios.get('/user/12345').catch((error) => {
   if (error.response) {
     // The request was made and the server responded with a status code
     // that falls out of the range of 2xx
@@ -40,3 +39,11 @@ axios.get('/user/12345').catch(function(error) {
   console.log(error.config)
 })
 ```
+
+[Read more here](https://github.com/axios/axios#handling-errors)
+
+## Redaxios
+
+The Axios API, as an 800 byte Fetch wrapper.
+
+https://github.com/developit/redaxios

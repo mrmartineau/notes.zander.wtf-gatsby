@@ -1,5 +1,6 @@
 ---
 title: Big list of naughty strings
+emoji: 🙅
 ---
 
 Source: https://github.com/minimaxir/big-list-of-naughty-strings

@@ -2,6 +2,7 @@
 title: Cutting the mustard
 tags:
   - javascript
+emoji: 😋
 ---
 
 ## Basic example
@@ -13,7 +14,7 @@ if (
   'addEventListener' in window &&
   'classList' in document.documentElement
 ) {
-  ;(function(H) {
+  ;(function (H) {
     H.className = H.className.replace(/\bbase\b/, 'enhanced')
   })(document.documentElement)
   window.lp.enhanced = true
@@ -40,7 +41,7 @@ Taken from https://barilla.com
 
 ```js
 // Many things taken from https://github.com/filamentgroup/enhance
-;(function(window, undefined) {
+;(function (window, undefined) {
   'use strict'
 
   var enhance = { enhanced: false },
@@ -88,7 +89,7 @@ Taken from https://barilla.com
 
     // Check for font so we can handle FOUT/FOIT consistently across all devices
     var fontfaceobserver = new FontFaceObserver('HurmeGeometricSans4', {})
-    fontfaceobserver.check().then(function() {
+    fontfaceobserver.check().then(function () {
       docElem.classList.add('fonts-loaded')
       sessionStorage.fontsLoaded = true
     })

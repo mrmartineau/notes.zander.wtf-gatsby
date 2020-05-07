@@ -3,7 +3,10 @@ title: CSS Media Queries
 tags:
   - css
 source: https://blog.logrocket.com/new-media-queries-you-need-to-know/
+emoji: ↔️
 ---
+
+#### Table of contents
 
 ## light-level
 
@@ -69,6 +72,26 @@ This feature is already widely supported in browsers, and has three possible val
     <img src="https://caniuse.bitsofco.de/image/prefers-color-scheme.png" alt="Data on support for the prefers-color-scheme feature across the major browsers from caniuse.com"/>
   </picture>
 </a>
+
+#### `color-scheme`
+
+The `color-scheme` CSS property and the corresponding meta tag allow developers to opt their pages in to the theme-specific defaults of the user agent stylesheet.
+
+```html
+<meta name="color-scheme" content="dark light" />
+```
+
+```css
+/*
+  The page supports both dark and light color schemes,
+  and the page author prefers dark.
+*/
+:root {
+  color-scheme: dark light;
+}
+```
+
+[Read more at web.dev](https://web.dev/color-scheme/)
 
 ### prefers-contrast
 

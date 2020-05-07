@@ -8,6 +8,29 @@ tags:
 - [React TypeScript cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet)
 - The tsconfig Schema: http://json.schemastore.org/tsconfig
 
+### Pick
+
+Pick only the selected items from a given type
+
+```ts
+interface OldInterface {
+  title: string
+  description: string
+  date: string
+}
+
+type NewType = Pick<OldInterface, 'title' | 'date'>
+```
+
+## Custom types
+
+```ts
+// Convert specified properties of T to be optional
+type WithOptional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
+
+type NewType = WithOptional<OldInterface, 'date' | 'title'>
+```
+
 ## Built-in types
 
 ```ts
@@ -65,27 +88,4 @@ type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>
  * Exclude null and undefined from T
  */
 type NonNullable<T> = T extends null | undefined ? never : T
-```
-
-### Pick
-
-Pick only the selected items from a given type
-
-```ts
-interface OldInterface {
-  title: string
-  description: string
-  date: string
-}
-
-type NewType = Pick<OldInterface, 'title' | 'date'>
-```
-
-## Custom types
-
-```ts
-// Convert specified properties of T to be optional
-type WithOptional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
-
-type NewType = WithOptional<OldInterface, 'date' | 'title'>
 ```

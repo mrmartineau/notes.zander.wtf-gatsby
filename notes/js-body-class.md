@@ -2,6 +2,7 @@
 title: JS body class
 tags:
   - javascript
+emoji: 🤷‍♂️
 ---
 
 ### Best
@@ -9,7 +10,7 @@ tags:
 ```js
 window.document.documentElement.className =
   window.document.documentElement.className.replace(/\bno-js\b/g, '') + ' js '
-;(function(H) {
+;(function (H) {
   H.className = H.className.replace(/\bno-js\b/, 'js')
 })(document.documentElement)
 ```
