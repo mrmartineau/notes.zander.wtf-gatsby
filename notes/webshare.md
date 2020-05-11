@@ -2,7 +2,7 @@
 title: Webshare API
 tags:
   - javascript
-source: https://web.dev/web-share/
+link: https://web.dev/web-share/
 emoji: 👀
 ---
 

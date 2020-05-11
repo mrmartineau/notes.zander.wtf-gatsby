@@ -2,7 +2,7 @@
 title: CSS Media Queries
 tags:
   - css
-source: https://blog.logrocket.com/new-media-queries-you-need-to-know/
+link: https://blog.logrocket.com/new-media-queries-you-need-to-know/
 emoji: ↔️
 ---
 
