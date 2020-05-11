@@ -3,9 +3,11 @@ title: Clickable box
 tags:
   - javascript
   - react
-source: https://github.com/danoc/clickable-box
+link: https://github.com/danoc/clickable-box
 emoji: 📦
 ---
+
+Note: this implementation has some major drawbacks compared to using a native `<button>` element. For example a proper `disabled` state cannot be achieved without a lot more effor. Always use the correct HTML element for the job!
 
 ```jsx
 <span

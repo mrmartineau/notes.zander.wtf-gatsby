@@ -1,5 +1,5 @@
 ---
-title: Is mobile check
+title: is-mobile check
 tags:
   - javascript
 emoji: 📱
@@ -13,3 +13,5 @@ function isUserAgentSignallingMobile(userAgentString) {
   return ua.device.type === 'mobile'
 }
 ```
+
+Repo: https://github.com/faisalman/ua-parser-js

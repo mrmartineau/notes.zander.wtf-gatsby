@@ -3,6 +3,7 @@ title: Theme UI
 tags:
   - react
 emoji: 🎨
+link: https://theme-ui.com
 ---
 
 ## Theme spec
@@ -40,9 +41,9 @@ Use the `variant` key as documented [here](https://theme-ui.com/theme-spec#varia
 const theme = {
   motion: {
     defaultTransition: {
-      transition: 'all 300ms ease-in-out'
-    }
-  }
+      transition: 'all 300ms ease-in-out',
+    },
+  },
 }
 
 // use the `variant` key
@@ -50,7 +51,7 @@ const Link = () => <a sx={{ variant: 'motion.defaultTransition' }}>Click me</a>
 
 // could also do this
 const Link = () => (
-  <a sx={{ transition: theme => theme.motion.defaultTransition.transition }}>
+  <a sx={{ transition: (theme) => theme.motion.defaultTransition.transition }}>
     Click me
   </a>
 )

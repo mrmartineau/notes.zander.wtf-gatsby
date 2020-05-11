@@ -2,7 +2,7 @@
 title: CSS scroll-behavior
 tags:
   - css
-source: https://gomakethings.com/how-to-animate-scrolling-to-anchor-links-with-one-line-of-css/
+link: https://gomakethings.com/how-to-animate-scrolling-to-anchor-links-with-one-line-of-css/
 ---
 
 ## The scroll-behavior property

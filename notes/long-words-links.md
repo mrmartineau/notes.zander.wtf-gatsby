@@ -2,6 +2,7 @@
 title: Handling Long Words and URLs (Forcing Breaks, Hyphenation, Ellipsis, etc)
 tags:
   - css
+link: https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container
 ---
 
 ```css
@@ -23,8 +24,6 @@ tags:
   hyphens: auto;
 }
 ```
-
-Source: https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
 
 ### Preventing Overflow with Ellipsis
 

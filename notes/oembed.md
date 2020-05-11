@@ -3,9 +3,8 @@ title: oEmbed
 tags:
   - javascript
   - html
+link: https://oembed.com/
 ---
-
-[oEmbed.com](https://oembed.com/)
 
 Default providers list: https://oembed.com/providers.json
 

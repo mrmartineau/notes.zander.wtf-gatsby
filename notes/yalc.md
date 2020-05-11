@@ -2,9 +2,8 @@
 title: Yalc
 tags:
   - javascript
+link: https://github.com/whitecolor/yalc
 ---
-
-[Yalc repo](https://github.com/whitecolor/yalc)
 
 Say we have two repos:
 

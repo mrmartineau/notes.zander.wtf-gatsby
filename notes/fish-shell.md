@@ -3,6 +3,7 @@ title: Fish shell
 emoji: 🐠
 tags:
   - cli
+link: https://fishshell.com
 ---
 
 My Fish config: https://github.com/mrmartineau/fish

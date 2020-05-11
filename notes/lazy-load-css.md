@@ -3,9 +3,8 @@ title: Lazy load CSS
 tags:
   - css
 emoji: 🥱
+link: https://www.filamentgroup.com/lab/load-css-simpler
 ---
-
-From https://www.filamentgroup.com/lab/load-css-simpler/
 
 ```html
 <link rel="preload" href="/path/to/my.css" as="style" />

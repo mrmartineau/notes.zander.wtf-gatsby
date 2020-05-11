@@ -3,6 +3,7 @@ title: Testing library
 tags:
   - testing
 emoji: 🧪
+link: https://testing-library.com
 ---
 
 ## DOM
@@ -94,10 +95,8 @@ cy.findByText('Non-existing Button Text').should('not.exist')
 cy.findByLabelText('Label text', { timeout: 7000 }).should('exist')
 
 // findAllByText _inside_ a form element
-cy.get('form')
-  .findByText('Button Text')
-  .should('exist')
-cy.get('form').then(subject => {
+cy.get('form').findByText('Button Text').should('exist')
+cy.get('form').then((subject) => {
   cy.findByText('Button Text', { container: subject }).should('exist')
 })
 ```

@@ -1,9 +1,8 @@
 ---
 title: Big list of naughty strings
 emoji: 🙅
+link: https://github.com/minimaxir/big-list-of-naughty-strings
 ---
-
-Source: https://github.com/minimaxir/big-list-of-naughty-strings
 
 ```yaml
 # Reserved Strings

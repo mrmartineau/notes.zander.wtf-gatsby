@@ -3,6 +3,7 @@ title: Storybook
 tags:
   - testing
 emoji: 📖
+link: https://storybook.js.org
 ---
 
 ## Stories
@@ -13,7 +14,7 @@ import { ArticlePage } from './ArticlePage'
 
 export default {
   title: 'Components|ArticlePage',
-  component: ArticlePage
+  component: ArticlePage,
 }
 
 export const image: FunctionComponent = () => <ArticlePage />
@@ -63,15 +64,15 @@ module.exports = {
     '@storybook/addon-knobs/register',
     '@storybook/addon-viewport/register',
     'storybook-addon-color-mode/register',
-    'storybook-addon-paddings'
+    'storybook-addon-paddings',
   ],
   webpackFinal: async (config, { configType }) => {
     config.module.rules.push({
       test: /\.stories\.tsx/,
-      use: [{ loader: 'story-description-loader', options: { isTSX: true } }]
+      use: [{ loader: 'story-description-loader', options: { isTSX: true } }],
     })
     return config
-  }
+  },
 }
 ```
 
@@ -90,18 +91,18 @@ addParameters({
   colorMode: {
     modes: {
       dark: {
-        name: 'Dark'
-      }
+        name: 'Dark',
+      },
     },
-    defaultMode: 'default'
-  }
+    defaultMode: 'default',
+  },
 })
 addParameters({
   paddings: [
     { name: 'Small', value: '16px' },
     { name: 'Medium', value: '32px', default: true },
-    { name: 'Large', value: '64px' }
-  ]
+    { name: 'Large', value: '64px' },
+  ],
 })
 addDecorator(withPaddings)
 addDecorator(withA11y)
