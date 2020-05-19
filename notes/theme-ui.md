@@ -19,7 +19,9 @@ https://theme-ui.com/sx-prop
 import { jsx } from 'theme-ui'
 ```
 
-## useThemeUI
+## Packages and methods
+
+### useThemeUI
 
 https://theme-ui.com/use-theme-ui
 
@@ -54,6 +56,25 @@ const Link = () => (
   <a sx={{ transition: (theme) => theme.motion.defaultTransition.transition }}>
     Click me
   </a>
+)
+```
+
+### @theme-ui/color
+
+https://theme-ui.com/packages/color
+
+```js
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import { darken, lighten } from '@theme-ui/color'
+export default (props) => (
+  <div
+    {...props}
+    sx={{
+      color: darken('primary', 0.25),
+      bg: lighten('primary', 0.875),
+    }}
+  />
 )
 ```
 
