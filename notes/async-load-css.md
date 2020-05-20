@@ -1,5 +1,5 @@
 ---
-title: Lazy load CSS
+title: Async load CSS
 tags:
   - css
 emoji: 🥱
