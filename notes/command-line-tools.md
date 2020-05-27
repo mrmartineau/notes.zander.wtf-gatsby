@@ -8,29 +8,12 @@ emoji: 📟
 
 ## Keyboard shortcuts
 
-### ctrl-r
-
-Search previously used commands
-
-### ctrl-t
-
-Invoke _FZF_ fuzzy file finder (see below)
-
-### ctrl-l
-
-Clear the terminal screen
-
-### ctrl-k
-
-Clears the terminal screen but no-scroll back. Basically wipes the
-
-### ctrl-w
-
-Cut one word backwards using white space as delimiter
-
-### esc-t
-
-Swap the last two words before the cursor
+- `ctrl-r` - Search previously used commands
+- `ctrl-t` - Invoke _FZF_ fuzzy file finder (see below)
+- `ctrl-l` - Clear the terminal screen
+- `ctrl-k` - Clears the terminal screen but no-scroll back. Basically wipes the
+- `ctrl-w` - Cut one word backwards using white space as delimiter
+- `esc-t` - Swap the last two words before the cursor
 
 ## Commands
 
