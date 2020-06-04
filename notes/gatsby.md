@@ -5,6 +5,25 @@ tags:
   - graphql
 ---
 
+## wrapRootElement
+
+This is where Providers would be setup, think Redux etc
+
+```jsx
+// gatsby-browser.js
+const React = require('react')
+const { Provider } = require('react-redux')
+
+const createStore = require('./src/state/createStore')
+const store = createStore()
+
+exports.wrapRootElement = ({ element }) => {
+  return <Provider store={store}>{element}</Provider>
+}
+```
+
+More info [here](https://www.gatsbyjs.org/docs/browser-apis/#wrapRootElement)
+
 ## GraphQL
 
 - [Gatsby GraphQL reference](https://www.gatsbyjs.org/docs/graphql-reference)
