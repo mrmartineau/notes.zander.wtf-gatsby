@@ -78,6 +78,43 @@ export default (props) => (
 )
 ```
 
+## Using TypeScript
+
+### Adding an sx prop to a custom component
+
+This example allows a user to pass an `sx` prop to a child component. In order to do that, you'll need an interface from `theme-ui`: [`SxStyleProp`]()
+
+```tsx
+import React, { FunctionComponent } from 'react'
+import { SxStyleProp } from 'theme-ui'
+import { Heading } from 'theme-ui'
+
+type HeadingTags = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+
+interface MassiveTitleProps {
+  sx?: SxStyleProp
+  as?: HeadingTags
+}
+
+export const MassiveTitle: FunctionComponent<MassiveTitleProps> = ({
+  sx,
+  as = 'h1',
+  children,
+}) => {
+  return (
+    <Heading
+      as={as}
+      sx={{
+        color: 'primary',
+        ...sx,
+      }}
+    >
+      {children}
+    </Heading>
+  )
+}
+```
+
 ## Tips
 
 ### Object styles

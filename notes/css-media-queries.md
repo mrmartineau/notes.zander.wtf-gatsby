@@ -6,8 +6,6 @@ link: https://blog.logrocket.com/new-media-queries-you-need-to-know/
 emoji: ↔️
 ---
 
-#### Table of contents
-
 ## light-level
 
 This feature isn’t available in any browsers at the time of writing, but it definitely sounds like a future favorite. With the [`light-level`](https://drafts.csswg.org/mediaqueries-5/#light-level) media query, you can tune your styles based on whether your user is viewing your web app outside in daylight, or perhaps checking in before going to bed. This is great news for anyone who has ever tried to read their phone in the park, or check out a website at night!

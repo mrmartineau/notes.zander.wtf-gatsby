@@ -15,10 +15,10 @@
     "start": "gatsby serve"
   },
   "dependencies": {
-    "gatsby": "^2.23.1",
-    "gatsby-plugin-manifest": "^2.4.10",
-    "gatsby-plugin-offline": "^3.2.8",
-    "gatsby-theme-code-notes": "1.6.0",
+    "gatsby": "^2.23.3",
+    "gatsby-plugin-manifest": "^2.4.11",
+    "gatsby-plugin-offline": "^3.2.9",
+    "gatsby-theme-code-notes": "1.7.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
