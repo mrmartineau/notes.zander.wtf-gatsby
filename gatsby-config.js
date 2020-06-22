@@ -15,6 +15,14 @@ module.exports = {
           'https://github.com/mrmartineau/notes.zander.wtf/tree/master/notes/',
         showThemeInfo: true,
         showDescriptionInSidebar: true,
+        openSearch: {
+          siteShortName: `Zander's Code Notes`,
+          siteUrl: 'https://notes.zander.wtf',
+          siteTags: 'front-end',
+          siteContact: 'https://twitter.com/MrMartineau',
+          siteDescription:
+            'Notes on code. My memory bank, by Zander Martineau.',
+        },
       },
     },
     {
