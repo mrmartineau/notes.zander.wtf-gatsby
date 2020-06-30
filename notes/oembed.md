@@ -10,7 +10,7 @@ Default providers list: https://oembed.com/providers.json
 
 Example provider scheme:
 
-```
+```json
 {
   "provider_name": "Twitter",
   "provider_url": "http:\/\/www.twitter.com\/",
