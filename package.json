@@ -18,6 +18,7 @@
     "gatsby": "^2.23.12",
     "gatsby-plugin-manifest": "^2.4.14",
     "gatsby-plugin-offline": "^3.2.13",
+    "gatsby-plugin-plausible": "^0.0.6",
     "gatsby-theme-code-notes": "^1.12.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

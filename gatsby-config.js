@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'notes.zander.wtf',
-    description: `Notes on code. My memory bank, by Zander Martineau.`,
+    description: `Notes on code. My  second brain, by Zander Martineau.`,
     keywords: [],
     author: 'Zander',
   },
@@ -21,7 +21,7 @@ module.exports = {
           siteTags: 'front-end',
           siteContact: 'https://twitter.com/MrMartineau',
           siteDescription:
-            'Notes on code. My memory bank, by Zander Martineau.',
+            'Notes on code. My  second brain, by Zander Martineau.',
         },
       },
     },
@@ -30,7 +30,7 @@ module.exports = {
       options: {
         name: `Zander's Code Notes`,
         short_name: `CodeNotes`,
-        description: `Notes on code. My memory bank.`,
+        description: `Notes on code. My second brain.`,
         start_url: `/`,
         background_color: `hsl(210, 38%, 95%)`,
         theme_color: `hsl(345, 100%, 69%)`,
@@ -42,6 +42,13 @@ module.exports = {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/*`, `/tag/*`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `notes.zander.wtf`,
+        customDomain: `stats.zander.wtf`,
       },
     },
   ],
