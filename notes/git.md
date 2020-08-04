@@ -4,12 +4,44 @@ tags:
   - cheatsheet
 ---
 
+## Staging/Adding files
+
+Add all files from current directory
+
+```sh
+git add .
+```
+
+Add all files from specific directory
+
+```sh
+git add <directory>
+```
+
 ## Branches
+
+Create a local branch and switch to it
+
+```sh
+git checkout -b <new-branch-name>
+```
+
+Switch to an existing branch
+
+```sh
+git checkout <branch-name>
+```
 
 List all local branches
 
 ```sh
 git branch
+```
+
+List remote and local branches
+
+```sh
+git branch -a
 ```
 
 List all merged branches
@@ -21,33 +53,78 @@ git branch --merged
 Same as above but exclude master and develop branches
 
 ```sh
-git branch --merged | egrep -v "(^\*|master|develop)"
+git branch --merged | egrep -v "(^\*|master|main|develop)"
 ```
 
 ### Deleting branches
 
 ```sh
-git branch -d branch_name
+git branch -d <branch-name>
 ```
 
 ### Delete remote branches
 
 ```sh
-git push origin --delete branch1 branch2
+git push origin --delete <branch-name-1> <branch-name-2>
 ```
 
-## Generate release notes
+## Merging
 
-These release notes were generated using this script:
+Merge another branch into current branch
 
 ```sh
-git log f5b38145...8c17d7a9 --pretty=format:'- **%s** ([%h](github.com/mrmartineau/notes.zander.wtf/commit/%H)) by %an' --reverse
+git merge <branch-name>
 ```
 
-To retrieve the git commit hashes use this:
+### Rebasing
+
+Rebase from a branch
+
+```sh
+git rebase <branch-name>
+```
+
+Interactive rebase + squash commits
+
+```sh
+git rebase -i
+
+# optional branch name
+git rebase -i <branch-name>
+```
+
+## Logs
+
+Show commit history in single lines
 
 ```sh
 git log --oneline
+```
+
+Show all local file changes in the working tree
+
+```sh
+git diff
+```
+
+## Cleanup
+
+Undo local modifications to all files
+
+```sh
+git checkout -- .
+```
+
+Unstage a file
+
+```sh
+git reset HEAD myfile
+```
+
+## Cherry picking
+
+```sh
+git cherry-pick <commit-hash> <commit-hash>
 ```
 
 ## Tags
@@ -66,17 +143,28 @@ git tag --delete v1.9.2
 
 # push all tags to remote
 git push --follow-tags origin master
+git push --follow-tags origin main
 ```
 
 ---
 
-[gitsheet.wtf](https://gitsheet.wtf/)
+## Generate release notes
 
-[gitexplorer.com](https://gitexplorer.com/)
+These release notes were generated using this script:
 
-[Setting Up Git Identities](https://www.micah.soy/posts/setting-up-git-identities/)
+```sh
+git log f5b38145...8c17d7a9 --pretty=format:'- **%s** ([%h](github.com/mrmartineau/notes.zander.wtf/commit/%H)) by %an' --reverse
+```
 
-### Branching strategies
+To retrieve the git commit hashes use this:
+
+```sh
+git log --oneline
+```
+
+---
+
+## Branching strategies
 
 - [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/)
 - [Please stop recommending Git Flow!](https://georgestocker.com/2020/03/04/please-stop-recommending-git-flow/)
@@ -93,3 +181,11 @@ git push --follow-tags origin master
 - When you need feedback or help, or you think the branch is ready for merging, open a pull request
 - After someone else has reviewed and signed off on the feature, you can merge it into master
 - Once it is merged and pushed to ‘master’, you can and should deploy immediately
+
+---
+
+[gitsheet.wtf](https://gitsheet.wtf/)
+
+[gitexplorer.com](https://gitexplorer.com/)
+
+[Setting Up Git Identities](https://www.micah.soy/posts/setting-up-git-identities/)
