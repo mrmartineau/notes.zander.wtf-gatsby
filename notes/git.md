@@ -101,6 +101,12 @@ Show commit history in single lines
 git log --oneline
 ```
 
+Fancy Logs
+
+```sh
+git log --graph --pretty --abbrev-commit --date=relative --branches
+```
+
 Show all local file changes in the working tree
 
 ```sh
@@ -146,6 +152,27 @@ git push --follow-tags origin master
 git push --follow-tags origin main
 ```
 
+## Undoing
+
+```sh
+# undo push
+git push -f origin HEAD^:<branch-name>
+
+# undo commit
+git reset HEAD~1
+
+# undocommitforce
+git reset --hard HEAD~1
+```
+
+## Config
+
+In Git 2.28, a new configuration option, `init.defaultBranch` is being introduced to replace `master`, the previous default.
+
+```sh
+git config --global init.defaultBranch main
+```
+
 ---
 
 ## Generate release notes
@@ -153,7 +180,7 @@ git push --follow-tags origin main
 These release notes were generated using this script:
 
 ```sh
-git log f5b38145...8c17d7a9 --pretty=format:'- **%s** ([%h](github.com/mrmartineau/notes.zander.wtf/commit/%H)) by %an' --reverse
+git log <commit-hash>...<commit-hash> --pretty=format:'- **%s** ([%h](github.com/mrmartineau/notes.zander.wtf/commit/%H)) by %an' --reverse
 ```
 
 To retrieve the git commit hashes use this:
