@@ -91,7 +91,15 @@ git rebase -i
 
 # optional branch name
 git rebase -i <branch-name>
+
+# when you want to squash 17 commits where some include merge commits
+git rebase -i HEAD~17 --rebase-merges
 ```
+
+Useful:
+
+- https://codeinthehole.com/guides/resolving-conflicts-during-a-git-rebase/
+- https://thoughtbot.com/blog/git-interactive-rebase-squash-amend-rewriting-history
 
 ## Logs
 
@@ -167,11 +175,52 @@ git reset --hard HEAD~1
 
 ## Config
 
+### Default branch
+
 In Git 2.28, a new configuration option, `init.defaultBranch` is being introduced to replace `master`, the previous default.
 
 ```sh
 git config --global init.defaultBranch main
 ```
+
+### diff3 diff format
+
+Use the **diff3** format to see common ancestor code in conflict blocks
+
+```sh
+git config --global merge.conflictstyle diff3
+```
+
+and then conflict blocks will be formatted like:
+
+```sh
+<<<<<<<< HEAD:path/to/file
+content from target branch
+|||||||| merged common ancestors:path/to/file
+common ancestor content
+========
+content from your working branch
+>>>>>>> Commit message:path/to/file
+```
+
+where the default conflict block has been extended with a new section, delimited by |||||||| and ========, which reveals the common ancester code.
+
+Comparing the HEAD block to the common ancestor block will often reveal the nature of the target-branch changes, allowing a straight-forward resolution.
+
+For instance, breath easy if the common ancester block is empty:
+
+```sh
+<<<<<<<< HEAD:path/to/file
+content from target branch
+|||||||| merged common ancestors:path/to/file
+========
+content from your working branch
+>>>>>>> Commit message:path/to/file
+```
+
+as this means both branches have added lines; they haven’t tried to update the same lines. You can simply delete the merge conflict markers to resolve.
+
+[More info](https://codeinthehole.com/guides/resolving-conflicts-during-a-git-rebase/)
 
 ---
 

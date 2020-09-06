@@ -3,7 +3,7 @@ title: Keycode
 tags:
   - javascript
 emoji: 🔑
-link: http://keycode.info/
+link: https://omatsuri.app/events-keycode
 ---
 
 ```js
@@ -14,3 +14,5 @@ document.addEventListener('keydown', (event) => {
   // do something
 })
 ```
+
+Alt link: http://keycode.info/

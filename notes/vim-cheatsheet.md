@@ -12,22 +12,22 @@ tags:
 
 **Substitute or Find/Replace**
 
-To find each occurrence of ‘eth0’ in the current line only, and replace it with ‘br0’, enter (first press Esc key and type):
+To find each occurrence of ‘pick’ in the current line only, and replace it with ‘s’, enter (first press Esc key and type):
 
 ```
-:%s/eth0/br0/g
+:%s/pick/s/g
 ```
 
-To find and replace all occurrences of ‘eth1’ with ‘br1’, enter:
+To find and replace all occurrences of ‘pick’ with ‘s’, enter:
 
 ```
-:%s/eth1/br1/g
+:%s/pick/s/g
 ```
 
-To find and replace all occurrences of ‘eth1’ with ‘br1’, but ask for confirmation first, enter:
+To find and replace all occurrences of ‘pick’ with ‘s’, but ask for confirmation first, enter:
 
 ```
-:%s/eth1/br1/gc
+:%s/pick/s/gc
 ```
 
 To find and replace all occurrences of case insensitive ‘eth1’ with ‘br1’, enter:
