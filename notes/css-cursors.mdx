@@ -10,13 +10,43 @@ emoji: 👆
 <div
   style={{
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(112px, 1fr))',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
     gap: '10px',
     fontFamily: 'monospace',
     fontSize: '0.8rem',
     textAlign: 'center',
   }}
 >
+  <div
+    style={{
+      cursor: 'none',
+      padding: '5%',
+      border: '1px solid',
+      borderRadius: '0.2rem',
+    }}
+  >
+    none
+  </div>
+  <div
+    style={{
+      cursor: 'inherit',
+      padding: '5%',
+      border: '1px solid',
+      borderRadius: '0.2rem',
+    }}
+  >
+    inherit
+  </div>
+  <div
+    style={{
+      cursor: 'auto',
+      padding: '5%',
+      border: '1px solid',
+      borderRadius: '0.2rem',
+    }}
+  >
+    auto
+  </div>
   <div
     style={{
       cursor: 'default',
@@ -317,7 +347,56 @@ emoji: 👆
   >
     nwse-resize
   </div>
+  <div
+    style={{
+      cursor: 'zoom-in',
+      padding: '5%',
+      border: '1px solid',
+      borderRadius: '0.2rem',
+    }}
+  >
+    zoom-in
+  </div>
+  <div
+    style={{
+      cursor: 'zoom-out',
+      padding: '5%',
+      border: '1px solid',
+      borderRadius: '0.2rem',
+    }}
+  >
+    zoom-out
+  </div>
+  <div
+    style={{
+      cursor: 'grab',
+      padding: '5%',
+      border: '1px solid',
+      borderRadius: '0.2rem',
+    }}
+  >
+    grab
+  </div>
+  <div
+    style={{
+      cursor: 'grabbing',
+      padding: '5%',
+      border: '1px solid',
+      borderRadius: '0.2rem',
+    }}
+  >
+    grabbing
+  </div>
 </div>
+
+```css
+/* URL, with a keyword fallback */
+cursor: url(hand.cur), pointer;
+
+/* URL and coordinates, with a keyword fallback */
+cursor: url(cursor1.png) 4 12, auto;
+cursor: url(cursor2.png) 2 2, pointer;
+```
 
 ## Massive cursor
 
