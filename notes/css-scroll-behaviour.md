@@ -55,3 +55,29 @@ When using `scroll-behavior`, you should add a `@media` check for preders-reduce
 This prevents animated scrolling when users have specified that they’d prefer reduced motion.
 
 [Read more on MDN](http://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior)
+
+## Usage with JavaScript
+
+```js
+// Scroll to specific values
+// scrollTo is the same
+window.scroll({
+  top: 2500,
+  left: 0,
+  behavior: 'smooth',
+})
+
+// Scroll certain amounts from current position
+window.scrollBy({
+  top: 100, // could be negative value
+  left: 0,
+  behavior: 'smooth',
+})
+
+// Scroll to a certain element
+document.querySelector('.hello').scrollIntoView({
+  behavior: 'smooth',
+})
+```
+
+[Reference](https://css-tricks.com/snippets/jquery/smooth-scrolling/)
