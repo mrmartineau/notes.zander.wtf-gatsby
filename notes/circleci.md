@@ -39,6 +39,24 @@ jobs:
       - run:
           name: test
           command: yarn test
+  deploy-chromatic:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout
+      - *npm_auth
+      - attach_workspace:
+          at: .
+      - run:
+          name: 'Trigger Chromatic release'
+          command: |
+            if [ "${CIRCLE_BRANCH}" != "master" ];
+            then
+              yarn chromatic:ci -a $CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes --exit-once-uploaded
+            else
+              # We know any changes that make it to master *must* have been accepted
+              yarn chromatic:ci -a $CHROMATIC_PROJECT_TOKEN --exit-once-uploaded --auto-accept-changes
+            fi
 
 workflows:
   version: 2

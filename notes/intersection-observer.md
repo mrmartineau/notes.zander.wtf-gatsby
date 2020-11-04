@@ -6,8 +6,8 @@ emoji: 🚸
 ---
 
 ```js
-var callback = (entries, observer) => {
-  entries.forEach(entry => {
+const handleIntersectionChange = (changes, observer) => {
+  changes.forEach((change) => {
     console.log('entry', entry)
     // Each entry describes an intersection change for one observed
     // target element:
@@ -19,17 +19,55 @@ var callback = (entries, observer) => {
     //   entry.target
     //   entry.time
     if (entry.intersectionRatio > 0.8) {
-      this.skippy.classList.add('is-inactive')
+      // do something
     } else {
-      this.skippy.classList.remove('is-inactive')
+      // do something else
     }
   })
 }
-var observer = new IntersectionObserver(callback, {
+var observer = new IntersectionObserver(handleIntersectionChange, {
   root: document.querySelector('body'),
   rootMargin: '0px',
-  threshold: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+  threshold: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
 })
 
-observer.observe(this.bigType)
+observer.observe(document.querySelector('.element'))
+```
+
+https://css-tricks.com/using-intersectionobserver-to-check-if-page-scrolled-past-certain-point/
+
+## With React
+
+```tsx
+import React, { FC, useEffect } from 'react'
+
+export const StickyBannerLayout: FC = ({ children }) => {
+  useEffect(() => {
+    if ('IntersectionObserver' in window) {
+      const config = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5,
+      }
+
+      const handleIntersectionChange = (changes) => {
+        changes.forEach((change) => {
+          if (change.isIntersecting) {
+            // do something
+          } else {
+            // do something else
+          }
+        })
+      }
+
+      const observer = new IntersectionObserver(
+        handleIntersectionChange,
+        config
+      )
+      observer.observe(document.querySelector('.element'))
+    }
+  }, [])
+
+  return <div>{children}</div>
+}
 ```
