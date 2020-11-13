@@ -5,28 +5,38 @@ tags:
 link: https://github.com/whitecolor/yalc
 ---
 
-Say we have two repos:
+## Installation
 
-`repo-a` which depends on npm `package-a`
+```sh
+yarn global add yalc
+```
+
+## Usage
+
+Say we have two projects. e.g. one website & one npm package that the website depends on:
+
+`website-a` which depends on npm `package-a`
 
 ### Step 1
 
-Run `yalc publish` in the `package-a` repo
+Run **`yalc publish`** in the `package-a` repo
 
 ### Step 2
 
-Run `yalc add package-a` in the `repo-a` repo
+Run **`yalc add package-a`** in the `website-a` repo
 
 ### Step 3
 
-Run `yarn` in `repo-a`
+Run `yarn` in `website-a`
 
 ### Step 4
 
-Whenever you update `package-a`, run `yalc push` in the `package-a`, and run `yalc add package-a` in the `repo-a` repo
+Whenever you update `package-a`, run **`yalc push`** in the `package-a` repo
 
-You may need to run `yarn build && yalc push` if `package-a` needs building first.
+You may need to run `yarn build && yalc push` if `package-a` needs building first. And You may need to run run `yalc add package-a` in the `website-a` repo.
+
+> If you have a dev server running in `website-a`, it might pick up the changes after **`yalc push`** automatically so you may not need to do anything else.
 
 ### Revert
 
-When you're done testing with Yalc, run `yalc remove --all` to remove all the yalced packages from `repo-a`
+When you're done testing with Yalc, run **`yalc remove --all`** to remove all the yalced packages from `website-a`
