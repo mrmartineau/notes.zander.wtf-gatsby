@@ -15,6 +15,8 @@ module.exports = {
           'https://github.com/mrmartineau/notes.zander.wtf/tree/master/notes/',
         showThemeInfo: true,
         showDescriptionInSidebar: true,
+        sortByDate: true,
+        showDate: true,
         openSearch: {
           siteShortName: `Zander's Code Notes`,
           siteUrl: 'https://notes.zander.wtf',

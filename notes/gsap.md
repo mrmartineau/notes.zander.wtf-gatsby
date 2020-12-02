@@ -9,8 +9,8 @@ link: https://greensock.com/docs/v3/GSAP
 
 ## GSAP
 
-Docs: https://greensock.com/docs/v3/GSAP
-Cheatsheet: https://greensock.com/cheatsheet/
+- Docs: https://greensock.com/docs/v3/GSAP
+- Cheatsheet: https://greensock.com/cheatsheet/
 
 ## Eases
 
@@ -18,8 +18,8 @@ https://greensock.com/docs/v3/Eases
 
 ## ScrollTrigger
 
-Docs: https://greensock.com/docs/v3/Plugins/ScrollTrigger
-Demos: https://greensock.com/st-demos/
+- Docs: https://greensock.com/docs/v3/Plugins/ScrollTrigger
+- Demos: https://greensock.com/st-demos/
 
 ```js
 import gsap from 'gsap'
@@ -91,8 +91,8 @@ useEffect(() => {
 
 ## ScrollTo
 
-Docs: https://greensock.com/docs/v3/Plugins/ScrollToPlugin
-Demos: https://greensock.com/st-demos/
+- Docs: https://greensock.com/docs/v3/Plugins/ScrollToPlugin
+- Demos: https://greensock.com/st-demos/
 
 ```js
 import gsap from 'gsap'
