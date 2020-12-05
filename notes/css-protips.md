@@ -1,5 +1,6 @@
 ---
 title: CSS Protips
+tags:
   - css
 link: https://github.com/AllThingsSmitty/css-protips
 ---
