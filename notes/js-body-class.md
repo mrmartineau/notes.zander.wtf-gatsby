@@ -3,6 +3,8 @@ title: JS body class
 tags:
   - javascript
 emoji: 🤷‍♂️
+created: 2020-03-22T14:53:49.000Z
+modified: 2020-05-07T11:04:41.000Z
 ---
 
 ### Best

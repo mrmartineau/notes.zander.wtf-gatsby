@@ -2,8 +2,10 @@
 title: Webshare API
 tags:
   - javascript
-link: https://web.dev/web-share/
+link: 'https://web.dev/web-share/'
 emoji: 👀
+created: 2020-05-07T11:04:41.000Z
+modified: 2020-05-11T11:31:08.000Z
 ---
 
 ```js

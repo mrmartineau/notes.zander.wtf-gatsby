@@ -1,7 +1,9 @@
 ---
 title: Awesome Web Development Resources
 emoji: 👌
-link: https://github.com/mrmartineau/awesome-web-dev-resources
+link: 'https://github.com/mrmartineau/awesome-web-dev-resources'
+created: 2020-04-11T06:27:27.000Z
+modified: 2020-06-11T15:00:59.000Z
 ---
 
 ![](https://badgen.net/github/last-commit/mrmartineau/awesome-web-dev-resources)

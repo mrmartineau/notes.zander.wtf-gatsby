@@ -3,7 +3,9 @@ title: Theme UI
 tags:
   - react
 emoji: 🎨
-link: https://theme-ui.com
+link: 'https://theme-ui.com'
+created: 2020-02-27T23:02:00.000Z
+modified: 2020-06-11T14:47:15.000Z
 ---
 
 ## Theme spec

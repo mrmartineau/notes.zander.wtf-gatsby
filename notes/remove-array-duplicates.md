@@ -3,6 +3,8 @@ title: Remove array duplicates
 tags:
   - javascript
 emoji: 🚚
+created: 2020-03-22T14:53:49.000Z
+modified: 2020-04-29T15:13:20.000Z
 ---
 
 ## Using `Set`

@@ -3,7 +3,9 @@ title: Testing library
 tags:
   - testing
 emoji: 🧪
-link: https://testing-library.com
+link: 'https://testing-library.com'
+created: 2020-03-25T17:00:14.000Z
+modified: 2020-05-11T11:47:16.000Z
 ---
 
 ## DOM

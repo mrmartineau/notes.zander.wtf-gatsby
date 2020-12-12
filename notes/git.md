@@ -2,6 +2,8 @@
 title: Git
 tags:
   - cheatsheet
+created: 2020-02-27T23:02:00.000Z
+modified: 2020-09-06T07:57:42.000Z
 ---
 
 ## Staging/Adding files

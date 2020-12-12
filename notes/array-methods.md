@@ -2,7 +2,9 @@
 title: Array methods summarised
 tags:
   - javascript
-emoji: 
+emoji: null
+created: 2020-02-27T23:51:44.000Z
+modified: 2020-03-26T23:06:06.000Z
 ---
 
 ## Intro

@@ -4,6 +4,8 @@ emoji: 🍿
 tags:
   - javascript
   - typescript
+created: 2020-02-27T23:51:44.000Z
+modified: 2020-02-27T23:51:44.000Z
 ---
 
 ```ts
@@ -23,7 +25,7 @@ const openFullscreen = (elem: HTMLElement): Promise<any> => {
 }
 
 // Usage
-openFullscreen(element).catch(error => {
+openFullscreen(element).catch((error) => {
   Sentry.captureException(new Error(error))
   Sentry.captureMessage(
     `Error attempting to enable full-screen mode: ${error.message} (${error.name})`

@@ -2,6 +2,8 @@
 title: Redux concepts
 tags:
   - react
+created: 2020-03-22T23:14:36.000Z
+modified: 2020-03-24T22:53:27.000Z
 ---
 
 > Notes made from reading the excellent: [Human Redux](https://reduxbook.com/) by [Henrik Joretag](https://joreteg.com/)

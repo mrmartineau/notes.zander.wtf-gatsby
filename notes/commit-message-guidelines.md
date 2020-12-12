@@ -1,7 +1,9 @@
 ---
 title: Commit message guidelines
 emoji: 📝
-link: https://www.conventionalcommits.org
+link: 'https://www.conventionalcommits.org'
+created: 2020-02-27T23:02:00.000Z
+modified: 2020-12-01T10:18:03.000Z
 ---
 
 ## Writing commits

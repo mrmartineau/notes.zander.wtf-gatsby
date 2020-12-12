@@ -3,6 +3,8 @@ title: IntersectionObserver
 tags:
   - javascript
 emoji: 🚸
+created: 2020-02-27T23:02:00.000Z
+modified: 2020-11-04T17:01:50.000Z
 ---
 
 ```js

@@ -2,8 +2,10 @@
 title: CSS Media Queries
 tags:
   - css
-link: https://blog.logrocket.com/new-media-queries-you-need-to-know/
+link: 'https://blog.logrocket.com/new-media-queries-you-need-to-know/'
 emoji: ↔️
+created: 2020-04-28T22:03:21.000Z
+modified: 2020-06-11T14:47:15.000Z
 ---
 
 ## light-level

@@ -3,6 +3,8 @@ title: Video
 emoji: 🎬
 tags:
   - html
+created: 2020-02-27T23:51:44.000Z
+modified: 2020-02-27T23:51:44.000Z
 ---
 
 ```html
@@ -20,3 +22,26 @@ tags:
   <a href="__VIDEO__.OGV">"Ogg"</a>
 </p>
 ```
+
+## Autoplay
+
+### Useful links
+
+- https://webkit.org/blog/6784/new-video-policies-for-ios/
+- https://docs.google.com/presentation/d/1DhW29bTLkDO6JSqp_wLUyByo00nI4krQ9laGQYQEJLU/edit
+  - https://bitmovin.com/play-not-play-new-autoplay-policies-safari-11-chrome-64/
+
+## Embedding YouTube/Vimeo etc
+
+### YouTube
+
+https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds
+
+### Vimeo
+
+https://vimeo.zendesk.com/hc/en-us/articles/360001494447-Using-Player-Parameters
+
+### Useful npm packages
+
+- https://github.com/alanshaw/embed-video
+- https://github.com/radiovisual/get-video-id

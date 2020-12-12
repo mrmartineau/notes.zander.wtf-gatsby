@@ -2,7 +2,9 @@
 title: iOS Safari bug
 tags:
   - css
-link: https://github.com/postcss/postcss-100vh-fix
+link: 'https://github.com/postcss/postcss-100vh-fix'
+created: 2020-09-13T18:44:16.000Z
+modified: 2020-09-13T18:44:16.000Z
 ---
 
 This solves the popular problem when 100vh doesn’t fit the mobile browser screen.

@@ -2,6 +2,8 @@
 title: SSR
 tags:
   - react
+created: 2020-09-06T07:57:42.000Z
+modified: 2020-09-06T07:57:42.000Z
 ---
 
 Use this to check if `window` is defined

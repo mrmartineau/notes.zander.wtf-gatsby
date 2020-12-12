@@ -2,7 +2,9 @@
 title: HTTP Methods
 tags:
   - networking
-link: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods'
+created: 2020-08-12T13:30:25.000Z
+modified: 2020-08-12T13:30:25.000Z
 ---
 
 `HTTP` defines a set of request methods to indicate the desired action to be performed for a given resource. Although they can also be nouns, these request methods are sometimes referred to as `HTTP` verbs. Each of them implements a different semantic, but some common features are shared by a group of them: e.g. a request method can be safe, idempotent, or cacheable.

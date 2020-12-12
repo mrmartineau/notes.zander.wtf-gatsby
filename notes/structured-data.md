@@ -1,5 +1,7 @@
 ---
 title: Schema.org structured data
+created: 2020-06-04T13:43:19.000Z
+modified: 2020-06-04T13:43:19.000Z
 ---
 
 ## JSON-LD

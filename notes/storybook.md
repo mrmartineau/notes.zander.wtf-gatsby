@@ -3,21 +3,23 @@ title: Storybook
 tags:
   - testing
 emoji: 📖
-link: https://storybook.js.org
+link: 'https://storybook.js.org'
+created: 2020-02-27T23:02:00.000Z
+modified: 2020-05-11T11:47:16.000Z
 ---
 
 ## Stories
 
 ```jsx
-import React, { FunctionComponent } from 'react'
+import React, { FC } from 'react'
 import { ArticlePage } from './ArticlePage'
 
 export default {
-  title: 'Components|ArticlePage',
+  title: 'Components/ArticlePage',
   component: ArticlePage,
 }
 
-export const image: FunctionComponent = () => <ArticlePage />
+export const image: FC = () => <ArticlePage />
 ```
 
 ### MDX

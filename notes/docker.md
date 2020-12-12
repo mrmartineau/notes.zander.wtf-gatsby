@@ -3,6 +3,8 @@ title: Docker
 emoji: 🐳
 tags:
   - devops
+created: 2020-02-27T23:02:00.000Z
+modified: 2020-03-04T10:21:17.000Z
 ---
 
 ## Best practices

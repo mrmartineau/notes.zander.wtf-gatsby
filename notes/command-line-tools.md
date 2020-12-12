@@ -1,9 +1,10 @@
 ---
 title: Command line tools
-date: 2019-11-03
 tags:
   - cli
 emoji: 📟
+created: 2019-11-03T00:00:00.000Z
+modified: 2020-05-27T16:07:27.000Z
 ---
 
 ## Keyboard shortcuts

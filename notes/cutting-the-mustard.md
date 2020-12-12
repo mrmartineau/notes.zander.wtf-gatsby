@@ -3,6 +3,8 @@ title: Cutting the mustard
 tags:
   - javascript
 emoji: 😋
+created: 2020-03-22T23:14:36.000Z
+modified: 2020-05-07T11:04:41.000Z
 ---
 
 ## Basic example

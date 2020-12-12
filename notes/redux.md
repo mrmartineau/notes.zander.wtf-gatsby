@@ -2,6 +2,8 @@
 title: Redux
 tags:
   - react
+created: 2020-02-27T23:02:00.000Z
+modified: 2020-03-24T22:53:27.000Z
 ---
 
 ## Basic example

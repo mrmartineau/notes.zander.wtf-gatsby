@@ -3,7 +3,9 @@ title: Client-only React
 tags:
   - react
 emoji: 🎣
-link: https://joshwcomeau.com/react/the-perils-of-rehydration/
+link: 'https://joshwcomeau.com/react/the-perils-of-rehydration/'
+created: 2020-06-11T14:47:15.000Z
+modified: 2020-06-11T14:47:15.000Z
 ---
 
 ## A client-only wrapper component

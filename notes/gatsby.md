@@ -3,6 +3,8 @@ title: Gatsby
 tags:
   - react
   - graphql
+created: 2020-02-27T23:02:00.000Z
+modified: 2020-06-04T13:43:19.000Z
 ---
 
 ## wrapRootElement

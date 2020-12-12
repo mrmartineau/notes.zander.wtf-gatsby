@@ -2,7 +2,9 @@
 title: CSS Protips
 tags:
   - css
-link: https://github.com/AllThingsSmitty/css-protips
+link: 'https://github.com/AllThingsSmitty/css-protips'
+created: 2020-10-06T13:29:18.000Z
+modified: 2020-12-05T08:02:12.000Z
 ---
 
 <p align="center">

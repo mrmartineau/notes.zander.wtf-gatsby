@@ -2,6 +2,8 @@
 title: Fluid typography
 tags:
   - css
+created: 2020-03-22T14:53:49.000Z
+modified: 2020-03-22T14:53:49.000Z
 ---
 
 ```css

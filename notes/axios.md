@@ -3,7 +3,9 @@ title: Axios
 emoji: 🐕
 tags:
   - javascript
-link: https://github.com/axios/axios
+link: 'https://github.com/axios/axios'
+created: 2020-02-27T23:02:00.000Z
+modified: 2020-05-07T11:04:41.000Z
 ---
 
 ## POST request

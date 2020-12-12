@@ -3,3 +3,5 @@ public
 node_modules
 yalc.lock
 .yalc
+
+.vercel

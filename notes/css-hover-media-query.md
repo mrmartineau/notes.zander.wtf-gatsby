@@ -2,6 +2,8 @@
 title: Hover media-query
 tags:
   - css
+created: 2020-07-02T14:33:09.000Z
+modified: 2020-07-02T14:33:09.000Z
 ---
 
 ```css

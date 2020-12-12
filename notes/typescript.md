@@ -2,6 +2,8 @@
 title: TypeScript
 tags:
   - typescript
+created: 2020-02-27T23:02:00.000Z
+modified: 2020-05-07T11:04:41.000Z
 ---
 
 - [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/)

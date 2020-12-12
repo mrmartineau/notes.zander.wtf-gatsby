@@ -3,7 +3,9 @@ title: Styling siblings on hover
 tags:
   - css
 emoji: 💄
-link: https://codyhouse.co/nuggets/styling-siblings-on-hover
+link: 'https://codyhouse.co/nuggets/styling-siblings-on-hover'
+created: 2020-05-19T08:25:55.000Z
+modified: 2020-05-19T08:25:55.000Z
 ---
 
 Use the :not CSS selector to stylize siblings on hover.
