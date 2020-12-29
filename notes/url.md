@@ -2,6 +2,8 @@
 title: URL & URLSearchParams
 created: 2020-12-29T10:31:32.000Z
 modified: 2020-12-29T10:31:32.000Z
+tags:
+  - javascript
 ---
 
 ## URL
