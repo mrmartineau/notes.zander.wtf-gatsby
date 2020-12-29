@@ -17,7 +17,7 @@ All array methods iterate in what is traditionally called "left to right" - more
 
 ---
 
-### `forEach`:
+### `forEach`
 
 - _callback answers_: here’s an item. do something nutty with it, i don't care what.
 - _callback gets these arguments_: `item`, `index`, `list`
@@ -30,7 +30,7 @@ All array methods iterate in what is traditionally called "left to right" - more
 })
 ```
 
-### `map`:
+### `map`
 
 - _callback answers_: here’s an item. what should i put in the new list in its place?
 - _callback gets these arguments_: `item`, `index`, `list`
@@ -39,13 +39,13 @@ All array methods iterate in what is traditionally called "left to right" - more
 
 ```js
 const three = [1, 2, 3]
-const doubled = three.map(item => {
+const doubled = three.map((item) => {
   return item * 2
 })
 console.log(three === doubled, doubled) // false, [2, 4, 6]
 ```
 
-### `filter`:
+### `filter`
 
 - _callback is a predicate_ - it should return a truthy or falsy value
 - _callback answers_: should i keep this item?
@@ -55,13 +55,13 @@ console.log(three === doubled, doubled) // false, [2, 4, 6]
 
 ```js
 const ints = [1, 2, 3]
-const evens = ints.filter(item => {
+const evens = ints.filter((item) => {
   return item % 2 === 0
 })
 console.log(ints === evens, evens) // false, [2]
 ```
 
-### `reduce`:
+### `reduce`
 
 - _callback answers_: here’s the result from the previous iteration. what should i pass to the next iteration?
 - _callback gets these arguments_: `result`, `item`, `index`, `list`
@@ -78,7 +78,7 @@ const sum = [1, 2, 3].reduce((result, item) => {
 
 `reduceRight`: (same as `reduce`, but in reversed order: last-to-first)
 
-### `some`:
+### `some`
 
 - _callback is a predicate_ - it should return a truthy or falsy value
 - _callback answers_: does this item meet your criteria?
@@ -88,13 +88,13 @@ const sum = [1, 2, 3].reduce((result, item) => {
 - _example use case_:
 
 ```js
-const hasNegativeNumbers = [1, 2, 3, -1, 4].some(item => {
+const hasNegativeNumbers = [1, 2, 3, -1, 4].some((item) => {
   return item < 0
 })
 console.log(hasNegativeNumbers) // true
 ```
 
-### `every`:
+### `every`
 
 - _callback is a predicate_ - it should return a truthy or falsy value
 - _callback answers_: does this item meet your criteria?
@@ -104,13 +104,13 @@ console.log(hasNegativeNumbers) // true
 - _example use case_:
 
 ```js
-const allPositiveNumbers = [1, 2, 3].every(item => {
+const allPositiveNumbers = [1, 2, 3].every((item) => {
   return item > 0
 })
 console.log(allPositiveNumbers) // true
 ```
 
-### `find`:
+### `find`
 
 - _callback is a predicate_ - it should return a truthy or falsy value
 - _callback answers_: is this item what you’re looking for?
@@ -121,13 +121,13 @@ console.log(allPositiveNumbers) // true
 
 ```js
 const objects = [{ id: 'a' }, { id: 'b' }, { id: 'c' }]
-const found = objects.find(item => {
+const found = objects.find((item) => {
   return item.id === 'b'
 })
 console.log(found === objects[1]) // true
 ```
 
-### `findIndex`:
+### `findIndex`
 
 - _callback is a predicate_ - it should return a truthy or falsy value
 - _callback answers_: is this item what you’re looking for?
@@ -138,13 +138,13 @@ console.log(found === objects[1]) // true
 
 ```js
 const objects = [{ id: 'a' }, { id: 'b' }, { id: 'c' }]
-const foundIndex = objects.findIndex(item => {
+const foundIndex = objects.findIndex((item) => {
   return item.id === 'b'
 })
 console.log(foundIndex === 1) // true
 ```
 
-### `sort`:
+### `sort`
 
 - _callback is a comparator_ - it should return either a number either < 0, 0, or > 0
 - _callback answers_: how do the two items compare with each other
