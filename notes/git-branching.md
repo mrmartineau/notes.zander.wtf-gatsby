@@ -2,6 +2,8 @@
 title: Git branching strategies
 tags:
   - git
+created: 2020-12-29T17:17:21.000Z
+modified: 2020-12-29T17:17:21.000Z
 ---
 
 ## Different branching strategies

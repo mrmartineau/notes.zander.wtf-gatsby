@@ -3,7 +3,7 @@ title: Useful JavaScript functions & snippets
 tags:
   - javascript
 created: 2020-09-06T07:57:42.000Z
-modified: 2020-12-29T10:31:32.000Z
+modified: 2020-12-29T17:10:23.000Z
 ---
 
 ## Arrays
