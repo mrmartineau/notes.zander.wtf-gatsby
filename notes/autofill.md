@@ -2,6 +2,8 @@
 title: Form autofill attributes
 tags:
   - html
+created: 2020-12-29T10:31:32.000Z
+modified: 2020-12-29T10:31:32.000Z
 ---
 
 Spec: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill
