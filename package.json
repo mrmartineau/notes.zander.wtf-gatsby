@@ -20,7 +20,7 @@
     "gatsby-plugin-manifest": "^2.8.0",
     "gatsby-plugin-offline": "^3.6.0",
     "gatsby-plugin-plausible": "^0.0.7",
-    "gatsby-theme-code-notes": "^2.0.0-8",
+    "gatsby-theme-code-notes": "^2.0.0-9",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

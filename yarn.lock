@@ -7811,10 +7811,10 @@ gatsby-telemetry@^1.6.0:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
-gatsby-theme-code-notes@^2.0.0-8:
-  version "2.0.0-8"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-code-notes/-/gatsby-theme-code-notes-2.0.0-8.tgz#f8f4d953a3dcedaa014053ddb90d051c74676a2b"
-  integrity sha512-whl68mm+LkolYdu0Kz3ub9ZstdJLuXfbRKU4o2f9hPmBmadr7n7E+WyMfxGT+9DFdDCpWXGLr+mQGNnuh7tuiQ==
+gatsby-theme-code-notes@^2.0.0-9:
+  version "2.0.0-9"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-code-notes/-/gatsby-theme-code-notes-2.0.0-9.tgz#81c80aba272b180a94fb39339568bb80d2929d62"
+  integrity sha512-1QWnd4IT0S8wF3Fx7n0Ws6f2Ij5+Ya7nOXWTbS8CpoQjHZQY65L8dPhb2LIg3nU4SLcX+GdeNkW0s/mYAwnb3g==
   dependencies:
     "@alexcarpenter/slugify" "^1.0.6"
     "@hookit/local-storage" "^0.0.10"
