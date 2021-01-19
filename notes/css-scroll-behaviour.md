@@ -5,7 +5,7 @@ tags:
 link: >-
   https://gomakethings.com/how-to-animate-scrolling-to-anchor-links-with-one-line-of-css/
 created: 2020-04-28T22:03:21.000Z
-modified: 2020-10-06T13:21:57.000Z
+modified: 2021-01-16T13:21:57.000Z
 ---
 
 ## The scroll-behavior property
@@ -36,13 +36,21 @@ You can restrict it to specific elements if you want.
 }
 ```
 
+And if you want to disable it when someone uses their browser's "Find in page" function:
+
+```css
+html:focus-within {
+  scroll-behavior: smooth;
+}
+```
+
 ## Accessibility concerns
 
 Animations can cause issues for users who suffer from motion sickness and other conditions.
 
 Fortunately, Windows, macOs, iOS, and Android all provide a way for users to specify that they prefer reduced motion. And all modern browsers (but not IE) provide a way to check for that setting in both CSS and JavaScript.
 
-When using `scroll-behavior`, you should add a `@media` check for preders-reduced-motion: reduce, and revert to the default auto.
+When using `scroll-behavior`, you should add a `@media` check for prefers-reduced-motion: reduce, and revert to the default auto.
 
 ```css
 /**

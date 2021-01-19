@@ -4,10 +4,14 @@ tags:
   - react
   - graphql
 created: 2020-02-27T23:02:00.000Z
-modified: 2020-06-04T13:43:19.000Z
+modified: 2021-01-19T13:43:19.000Z
 ---
 
-## wrapRootElement
+## `gatsby-ssr.js`
+
+> The APIs wrapPageElement and wrapRootElement exist in both the SSR and browser APIs. If you use one of them, consider if you should implement it in both `gatsby-ssr.js` and `gatsby-browser.js` so that pages generated through SSR with Node.js are the same after being hydrated with browser JavaScript.
+
+### `wrapRootElement`
 
 This is where Providers would be setup, think Redux etc
 
@@ -25,6 +29,28 @@ exports.wrapRootElement = ({ element }) => {
 ```
 
 More info [here](https://www.gatsbyjs.org/docs/browser-apis/#wrapRootElement)
+
+https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr
+
+### `onRenderBody`
+
+```js
+export const onRenderBody = ({ setHeadComponents }) => {
+  setHeadComponents([
+    /**
+     * Preload font assets and via SSR to prevent FLOUT (Flash of Unstyled Text)
+     */
+    <link
+      key="Font-Preload--Venti-Bold"
+      rel="preload"
+      href="/fonts/stage-1/VentiCF-Bold--stage1.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
+  ])
+}
+```
 
 ## GraphQL
 

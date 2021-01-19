@@ -5,7 +5,7 @@ tags:
 emoji: 📖
 link: 'https://storybook.js.org'
 created: 2020-02-27T23:02:00.000Z
-modified: 2020-12-29T10:31:32.000Z
+modified: 2021-01-16T10:31:32.000Z
 ---
 
 ## Stories
@@ -28,6 +28,20 @@ export default {
       default: 'white',
     },*/
   },
+  /* argTypes: {
+    // Select element
+    variant: {
+      name: 'Variant',
+      defaultValue: 'large',
+      control: { type: 'radio', options: ['large', 'small'] },
+    },
+    // Radio
+    variant: {
+      name: 'Variant',
+      defaultValue: 'large',
+      control: { type: 'radio', options: ['large', 'small'] },
+    },
+  }, */
 } as Meta
 
 const Template: Story<MyComponentProps> = (args) => <Zander {...args} />
