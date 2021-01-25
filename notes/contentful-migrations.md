@@ -37,7 +37,7 @@ yarn global add contentful-cli
 
 ### Login
 
-You will need to login to contentful on your computer. Run `contentful login` and follow the prompts, see below for an example:
+You will need to login to Contentful on your computer. Run `contentful login` and follow the prompts, see below for an example:
 
 ```sh
 ❯ contentful login
@@ -53,7 +53,7 @@ You can always run contentful logout to remove it.
 
 Create a new CMA token (personal access token) from [this page](https://app.contentful.com/spaces/t51bs9y4c70l/api/cma_tokens).
 
-## Content modeling
+## Content modeling & migration scripts
 
 Every time you need to modify a content model, a new migration script should be created. It needs to be carefully modeled so that you don't overwrite existing types and content.
 
@@ -71,6 +71,75 @@ Useful links:
 - [CMS as code](https://www.contentful.com/help/cms-as-code/) - article about migrations etc on the Contentful help centre
 - [Managing multiple environments](https://www.contentful.com/developers/docs/concepts/multiple-environments/)
 - [Example migrations](https://github.com/contentful/contentful-migration/tree/master/examples)
+
+### Migration scripts
+
+```js
+```
+
+#### Richtext field
+
+```js
+const myRichTextCT = migration
+  .createContentType('myContentTypeWithRichText')
+  .name('MyContentTypeWithRichText')
+myRichTextCT
+  .createField('richText')
+  .name('Text')
+  .type('RichText')
+  .validations([
+    {
+      nodes: {
+        'embedded-entry-block': [
+          {
+            size: {
+              min: 1,
+              max: 4,
+            },
+          },
+          {
+            linkContentType: ['markdownContentType'],
+          },
+        ],
+        'embedded-entry-inline': [
+          {
+            size: {
+              min: 10,
+              max: 20,
+            },
+            message:
+              'this is a custom error for number of embedded inline entries',
+          },
+          {
+            linkContentType: ['parent'],
+            message: 'we only accept parent',
+          },
+        ],
+      },
+    },
+    {
+      enabledNodeTypes: [
+        'heading-1',
+        'heading-2',
+        'heading-3',
+        'heading-4',
+        'heading-5',
+        'ordered-list',
+        'unordered-list',
+        'hr',
+        'blockquote',
+        'embedded-entry-block',
+        'embedded-asset-block',
+        'hyperlink',
+        'entry-hyperlink',
+        'asset-hyperlink',
+        'embedded-entry-inline',
+      ],
+      message:
+        'Only heading 1, heading 2, heading 3, heading 4, heading 5, ordered list, unordered list, horizontal rule, quote, block entry, asset, link to Url, link to entry, link to asset, and inline entry nodes are allowed',
+    },
+  ])
+```
 
 ### Running the migration
 
