@@ -39,12 +39,12 @@ module.exports = {
         icon: `static/logo.png`,
       },
     },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [`/*`, `/tag/*`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-offline`,
+    //   options: {
+    //     precachePages: [`/*`, `/tag/*`],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-plausible`,
       options: {
