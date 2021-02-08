@@ -26,13 +26,7 @@ export interface TimerContextInterface {
   isRunning: boolean
 }
 
-export const TimerContext = createContext<TimerContextInterface>({
-  time: '',
-  start: () => {},
-  pause: () => {},
-  reset: () => {},
-  isRunning: false,
-})
+export const TimerContext = createContext<TimerContextInterface>({} as TimerContextInterface)
 
 export const TimerProvider = ({ children }) => {
   const { time, start, pause, reset, isRunning } = useTimer({
@@ -48,6 +42,9 @@ export const TimerProvider = ({ children }) => {
     </TimerContext.Provider>
   )
 }
+
+export const useTimerContext = (): TimerContextInterface =>
+  useContext(TimerContext)
 ```
 
 ## Usage
@@ -57,6 +54,9 @@ import React, { useContext } from 'react'
 
 const MyComponent = () => {
   const { time } = useContext(TimerContext)
+  // or
+  const { time } = useTimerContext()
+
   return <div>Timer expires in {time}</div>
 }
 ```

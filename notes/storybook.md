@@ -33,13 +33,19 @@ export default {
     variant: {
       name: 'Variant',
       defaultValue: 'large',
-      control: { type: 'radio', options: ['large', 'small'] },
+      control: {
+        type: 'select',
+        options: ['large', 'small']
+      },
     },
     // Radio
     variant: {
       name: 'Variant',
       defaultValue: 'large',
-      control: { type: 'radio', options: ['large', 'small'] },
+      control: {
+        type: 'radio',
+        options: ['large', 'small']
+      },
     },
   }, */
 } as Meta

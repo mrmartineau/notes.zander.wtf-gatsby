@@ -32,3 +32,26 @@ btn.addEventListener('click', myObject)
 ```
 
 [More info](https://dev.to/rikschennink/the-fantastically-magical-handleevent-function-1bp4)
+
+## Remove query param
+
+```ts
+// https://stackoverflow.com/a/58128921/91359
+
+export const removeSearchParam = (paramName: string): void => {
+  const searchParams = new URLSearchParams(window.location.search)
+  searchParams.delete(paramName)
+  if (history.replaceState) {
+    const searchString =
+      searchParams.toString().length > 0 ? '?' + searchParams.toString() : ''
+    const newUrl =
+      window.location.protocol +
+      '//' +
+      window.location.host +
+      window.location.pathname +
+      searchString +
+      window.location.hash
+    history.replaceState(null, document.title, newUrl)
+  }
+}
+```
