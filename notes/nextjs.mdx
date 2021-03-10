@@ -8,16 +8,13 @@ modified: 2021-03-09T20:57:49.000Z
 
 ## Pages
 
-## `_app.tsx`
+### `_app.tsx`
 
 ```tsx
 import { AppProps } from 'next/app'
 import React from 'react'
 import { ThemeProvider } from 'theme-ui'
 import { theme } from '../theme'
-import { initAuth } from '../auth/init'
-
-initAuth()
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
