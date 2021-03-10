@@ -3,12 +3,63 @@ title: Form autofill attributes
 tags:
   - html
 created: 2020-12-29T10:31:32.000Z
-modified: 2020-12-29T17:10:23.000Z
+modified: 2021-03-10T07:10:14.000Z
 ---
 
 Spec: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill
 
-## Name
+## All tokens
+
+- `name`
+- `honorific-prefix`
+- `given-name`
+- `additional-name`
+- `family-name`
+- `honorific-suffix`
+- `nickname`
+- `username`
+- `new-password`
+- `current-password`
+- `one-time-code`
+- `organization-title`
+- `organization`
+- `street-address`
+- `address-line1`
+- `address-line2`
+- `address-line3`
+- `address-level4`
+- `address-level3`
+- `address-level2`
+- `address-level1`
+- `country`
+- `country-name`
+- `postal-code`
+- `cc-name`
+- `cc-given-name`
+- `cc-additional-name`
+- `cc-family-name`
+- `cc-number`
+- `cc-exp`
+- `cc-exp-month`
+- `cc-exp-year`
+- `cc-csc`
+- `cc-type`
+- `transaction-currency`
+- `transaction-amount`
+- `language`
+- `bday`
+- `bday-day`
+- `bday-month`
+- `bday-year`
+- `sex`
+- `url`
+- `photo`
+
+There's also a very handy table [here](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill) if you scroll down a bit describing each token in detail.
+
+## Examples
+
+### Name
 
 ```html
 <label for="frmNameA">Name</label>
@@ -21,7 +72,7 @@ Spec: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#au
 />
 ```
 
-## Email
+### Email
 
 ```html
 <label for="frmEmailA">Email</label>
@@ -45,7 +96,7 @@ Spec: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#au
 />
 ```
 
-## Address
+### Address
 
 ```html
 <label for="frmAddressS">Address</label>
@@ -94,7 +145,7 @@ Spec: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#au
 />
 ```
 
-### Shipping and billing
+#### Shipping and billing
 
 ```html
 <textarea
@@ -123,7 +174,7 @@ Spec: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#au
 />
 ```
 
-## Telephones, email and instant messaging
+### Telephones, email and instant messaging
 
 ```html
 <input type="tel" name="home-phone" autocomplete="home tel" />
@@ -142,7 +193,7 @@ In addition to the `tel` field which would be a single input containing a full t
 - `tel-local-suffix`
 - `tel-extension`
 
-## Credit cards
+### Credit cards
 
 ```html
 <label for="frmNameCC">Name on card</label>
@@ -170,7 +221,7 @@ In addition to the `tel` field which would be a single input containing a full t
 />
 ```
 
-## Sections
+### Sections
 
 The final feature of the new autocomplete attribute tokens is the ability to declare an arbitrary section to group fields.
 
@@ -210,7 +261,7 @@ A section is defined using a token that starts with `section-`. What comes after
 </fieldset>
 ```
 
-## All the tokens
+### All the tokens
 
 If you’re using the autofill tokens, the order is:
 
@@ -231,7 +282,7 @@ The longest possible set autofill token might look something like this:
 />
 ```
 
-## Demo
+### Demo
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="Cross Browser Autofill Form — Selected Fields" src="https://codepen.io/grigs/embed/YqoyWv?height=265&theme-id=light&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/grigs/pen/YqoyWv'>Cross Browser Autofill Form — Selected Fields</a> by Jason Grigsby

@@ -7,7 +7,6 @@ modified: 2020-05-07T11:04:41.000Z
 ---
 
 - [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/)
-- [React TypeScript cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet)
 - The tsconfig Schema: http://json.schemastore.org/tsconfig
 
 ### Pick

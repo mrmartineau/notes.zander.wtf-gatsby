@@ -4,7 +4,7 @@ tags:
   - cli
 emoji: 📟
 created: 2019-11-03T00:00:00.000Z
-modified: 2020-05-27T16:07:27.000Z
+modified: 2021-02-15T17:25:27.000Z
 ---
 
 ## Keyboard shortcuts
@@ -62,26 +62,6 @@ Show directory contents as a tree
 ```sh
 # with yarn
 ❯ yarn global list
-yarn global v1.19.1
-info "canvas-sketch-cli@1.4.2" has binaries:
-   - canvas-sketch
-   - canvas-sketch-cli
-   - canvas-sketch-gif
-   - canvas-sketch-mp4
-info "create-razzle-app@2.4.0" has binaries:
-   - create-razzle-app
-info "create-react-app@2.1.2" has binaries:
-   - create-react-app
-info "docusaurus-init@1.0.1" has binaries:
-   - docusaurus-init
-info "emma-cli@2.0.1" has binaries:
-   - emma
-   - ema
-info "emoj@2.0.0" has binaries:
-   - emoj
-info "yalc@1.0.0-pre.27" has binaries:
-   - yalc
-✨  Done in 4.78s.
 
 # with npm
 ❯ npm -g ls --depth=0
@@ -89,9 +69,35 @@ info "yalc@1.0.0-pre.27" has binaries:
 
 ### Flush DNS cache
 
+#### 1. Clear OS-level DNS cache
+
+On Mac OS, run this in the terminal:
+
 ```
 sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder
 ```
+
+On Windows:
+
+```
+ipconfig /flushdns
+```
+
+#### 2. Clear DNS cache via Chrome
+
+Go to chrome://net-internals/#dns and click Clear host cache.
+
+This button sounds like it should clear the OS-level cache, but my experience just doing this isn't enough by itself.
+
+![Chrome DNS page](https://www.debugbear.com/public/blog/devtools-network/chrome-dns.png)
+
+#### 3. Close existing server connections
+
+Go to chrome://net-internals/#sockets and click Flush socket pools.
+
+![Chrome Sockets page](https://www.debugbear.com/public/blog/devtools-network/chrome-sockets.png)
+
+Then reload the page you're testing and you should see the DNS lookup again, as well as the time spent on establishing the TCP connection.
 
 ## Custom packages
 

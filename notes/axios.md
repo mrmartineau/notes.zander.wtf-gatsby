@@ -5,24 +5,113 @@ tags:
   - javascript
 link: 'https://github.com/axios/axios'
 created: 2020-02-27T23:02:00.000Z
-modified: 2020-05-07T11:04:41.000Z
+modified: 2021-03-09T23:29:49.000Z
 ---
 
-## POST request
+## Example requests
 
 ```js
-const createCurveAccountResponse = await axios({
+// GET
+const { data } = await axios({
   method: 'POST',
   url: `https://path.to/endpoint`,
-  data: {},
+})
+
+// POST
+const { data } = await axios({
+  method: 'POST',
+  url: `https://path.to/endpoint`,
+  data: {
+    name: 'Zander Martineau',
+  },
   headers: {},
 })
+```
+
+```ts
+interface ApiResponse {
+  test: number
+}
+
+const fetchSomeData = (): Promise<ApiResponse> => {
+  return axios<ApiResponse>({
+    method: 'POST',
+    url: `https://path.to/endpoint`,
+  }).then((response) => {
+    return {
+      ...response.data,
+    }
+  })
+}
+```
+
+### With authorisation
+
+```js
+// POST
+const { data } = await axios({
+  method: 'POST',
+  url: `https://path.to/endpoint`,
+  data: {
+    name: 'Zander Martineau',
+  },
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+})
+```
+
+### Try/Catch
+
+```ts
+interface ApiResponse {
+  test: number
+}
+
+const fetchSomeData = async (): Promise<ApiResponse> => {
+  try {
+    const { data } = await axios<ApiResponse>({
+      method: 'POST',
+      url: `https://path.to/endpoint`,
+    })
+
+    return data
+  } catch (error) {
+    console.error(error)
+  }
+}
+```
+
+### Alternate method using [await-to-js](https://github.com/scopsy/await-to-js)
+
+```ts
+import to from 'await-to-js'
+
+interface ApiResponse {
+  test: number
+}
+
+const fetchSomeData = async () => {
+  const [error, data] = await to<AxiosResponse<ApiResponse>>(
+    axios({
+      method: 'POST',
+      url: `https://path.to/endpoint`,
+    })
+  )
+
+  // ℹ️ Axios' default response has a `data` property,
+  // so you may prefer to return `data.data`
+  return data.data
+}
 ```
 
 ## Handling errors
 
 ```js
-axios.get('/user/12345').catch((error) => {
+axios({
+  method: 'GET',
+  url: '/user/12345',
+}).catch((error) => {
   if (error.response) {
     // The request was made and the server responded with a status code
     // that falls out of the range of 2xx
