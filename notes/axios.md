@@ -3,9 +3,9 @@ title: Axios
 emoji: 🐕
 tags:
   - javascript
-link: 'https://github.com/axios/axios'
+link: https://github.com/axios/axios
 created: 2020-02-27T23:02:00.000Z
-modified: 2021-03-09T23:29:49.000Z
+modified: 2021-04-22T17:49:48.665Z
 ---
 
 ## Example requests
@@ -77,7 +77,7 @@ const fetchSomeData = async (): Promise<ApiResponse> => {
 
     return data
   } catch (error) {
-    console.error(error)
+    throw new Error(error.message || 'error.unknown')
   }
 }
 ```
