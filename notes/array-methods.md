@@ -4,7 +4,7 @@ tags:
   - javascript
 emoji: null
 created: 2020-02-27T23:51:44.000Z
-modified: 2020-12-29T17:10:23.000Z
+modified: 2021-05-21T10:16:29.042Z
 ---
 
 ## Intro
@@ -156,4 +156,60 @@ console.log(foundIndex === 1) // true
 const objects = ['John', 'Doe', 'Foo', 'Bar']
 const sortedObjects = objects.sort((one, two) => -one.localeCompare(two)) // reverses the string in reverse order
 console.log(sortedObjects) // ['John', 'Foo', 'Doe', 'Bar']
+```
+
+#### Compare function examples
+
+```ts
+export const compare = (a, b):number  => {
+  if (a is less than b by some ordering criterion) {
+    return -1;
+  }
+  if (a is greater than b by the ordering criterion) {
+    return 1;
+  }
+  // a must be equal to b
+  return 0;
+}
+
+export const compareNumbers = (a:number, b:number) => {
+  return a - b;
+}
+
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export const sortByDisplayOrder = (a: any, b: any): number => {
+  return a.displayOrder - b.displayOrder
+}
+
+// Sort by property priority
+export const sortByPropertyPriority = <T>(
+  key: string,
+  sortingOrder: Record<string, number>,
+  order: 'asc' | 'desc' = 'asc',
+) => {
+  return (a: T, b: T): number => {
+    // eslint-disable-next-line
+    // @ts-ignore
+    // eslint-disable-next-line no-prototype-builtins
+    if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) return 0
+
+    const first =
+      a[key].toLowerCase() in sortingOrder
+        ? sortingOrder[a[key]]
+        : Number.MAX_SAFE_INTEGER
+    const second =
+      b[key].toLowerCase() in sortingOrder
+        ? sortingOrder[b[key]]
+        : Number.MAX_SAFE_INTEGER
+
+    let result = 0
+    if (first < second) {
+      result = -1
+    } else if (first > second) {
+      result = 1
+    }
+    return order === 'desc' ? ~result : result
+  }
+}
 ```

@@ -4,10 +4,13 @@ link: https://github.com/marketplace?type=actions
 tags:
   - devops
 created: 2021-03-03T12:25:27.000Z
-modified: 2021-03-10T14:58:27.000Z
+modified: 2021-05-07T09:47:35.049Z
 ---
 
-Docs: https://docs.github.com/en/actions
+Docs:
+
+- https://docs.github.com/en/actions
+- [Actions reference](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
 
 ## Example workflows
 
