@@ -2,7 +2,7 @@
 title: readme.md
 emoji: 📝
 created: 2020-02-27T23:51:44.000Z
-modified: 2020-06-11T14:47:15.000Z
+modified: 2021-07-10T07:14:48.229Z
 ---
 
 ### Header/intro
@@ -53,6 +53,12 @@ modified: 2020-06-11T14:47:15.000Z
       <img
         src="https://img.shields.io/twitter/follow/MrMartineau.svg?label=Follow%20@MrMartineau"
         alt="Follow @MrMartineau"
+      />
+    </a>
+    <a href="https://open.vscode.dev/organization/repository">
+      <img
+        src="https://open.vscode.dev/badges/open-in-vscode.svg"
+        alt="Open in Visual Studio Code"
       />
     </a>
   </p>
