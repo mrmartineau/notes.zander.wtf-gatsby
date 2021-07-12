@@ -4,7 +4,7 @@ link: https://react-query.tanstack.com
 tags:
   - react
 created: 2021-03-26T12:50:12.000Z
-modified: 2021-04-22T17:47:12.570Z
+modified: 2021-07-12T06:04:21.567Z
 ---
 
 ## useQuery
@@ -65,7 +65,7 @@ const someData = useQuery<ResponseUseQueryModel, Error>(
   () =>
     getSomeData<TraineeFeedbackDataModel>({
       path: TRAINEE_FEEDBACK,
-    })
+    }),
 )
 ```
 
@@ -82,7 +82,7 @@ const someData = useQuery<ResponseUseQueryModel, Error>(
   {
     // will wait for `idToken` to be truthy before running this query
     enabled: !!idToken,
-  }
+  },
 )
 ```
 
@@ -93,7 +93,7 @@ import { useQuery, UseQueryResult } from 'react-query'
 
 export const useTraineeFeedback = (
   traineeId: string,
-  idToken: string
+  idToken: string,
 ): UseQueryResult<TraineeFeedbackResponseModel, Error> => {
   return useQuery<TraineeFeedbackResponseModel, Error>(
     ['traineeFeedback', traineeId],
@@ -103,7 +103,7 @@ export const useTraineeFeedback = (
       }),
     {
       enabled: !!idToken,
-    }
+    },
   )
 }
 ```
@@ -130,7 +130,7 @@ export const ViewUser: React.FC = (props) => {
   const { userId } = useParams<ViewUserPagePathParameters>()
   const { status, data, error } = useQuery<IUser, Error>(
     `getUser for ${userId}`,
-    () => getUser({ id: userId })
+    () => getUser({ id: userId }),
   )
 
   if (status === 'success') {
@@ -172,4 +172,148 @@ const scorecardQueries = useQueries([
     enabled: !!idToken,
   },
 ])
+```
+
+## react-query with GraphQL
+
+### `useGqlQuery`
+
+#### Source
+
+```tsx
+import { useUserContext } from '../../providers'
+import { QueryKey, useQuery, UseQueryResult } from 'react-query'
+import { graphQlClient } from '../../graphql/client'
+import { auth } from '../../config'
+
+/**
+ * @name useGqlQuery
+ * @description a helper hook that should be used when calling the GraphQL API
+ */
+
+export const useGqlQuery = <Response = unknown, Variables = unknown>(
+  queryKey: QueryKey,
+  query: string,
+  variables?: Variables,
+): UseQueryResult<Response, Error> => {
+  return useQuery(queryKey, async () => {
+    if (auth?.currentUser) {
+      token = await auth.currentUser.getIdToken()
+    }
+    return await graphQlClient.request(query, variables)
+  })
+}
+```
+
+#### Usage
+
+```tsx
+export const GET_SHORTLIST = gql`
+  query($from_id: uuid!) {
+    contact_connection(
+      where: {
+        from_id: { _eq: $from_id }
+        _and: { row_status: { _eq: "active" } }
+      }
+    ) {
+      to_id
+    }
+  }
+`
+interface ShortlistItem {
+  to_id: string
+}
+
+interface QueryData {
+  contact_connection: ShortlistItem[]
+}
+
+interface QueryVariables {
+  from_id: string
+}
+
+const getShortlistQuery = useGqlQuery<QueryData, QueryVariables>(
+  'queryKey',
+  GET_SHORTLIST,
+  {
+    from_id: '1234557565675',
+  },
+)
+const shortlist = useMemo(() => getShortlistQuery?.data[getShortlistQuery])
+```
+
+### `useGqlMutation`
+
+#### Source
+
+```tsx
+import { useUserContext } from '../../providers'
+import { useMutation, UseMutationResult, UseMutationOptions } from 'react-query'
+import { graphQlClient } from '../../graphql/client'
+import { auth } from '../../config'
+
+/**
+ * @name useGqlMutation
+ * @description a helper hook that should be used when mutating data with the GraphQL API
+ */
+
+export const useGqlMutation = <Response = unknown, Variables = unknown>(
+  query: string,
+  sideEffects?: UseMutationOptions<Response, Error, Variables, unknown>,
+): UseMutationResult<Response, Error, Variables, unknown> => {
+  const { idToken } = useUserContext()
+  return useMutation(async (variables) => {
+    let token = idToken
+    if (auth?.currentUser) {
+      token = await auth.currentUser.getIdToken()
+    }
+    return graphQlClient.request(query, variables, {
+      Authorization: `Bearer ${token}`,
+    })
+  }, sideEffects)
+}
+```
+
+#### Usage
+
+```tsx
+export const REMOVE_SHORTLIST = gql`
+  mutation($from_id: uuid!, $to_id: uuid!) {
+    update_contact_connection(
+      where: { from_id: { _eq: $from_id }, to_id: { _eq: $to_id } }
+      _set: { row_status: "inactive" }
+    ) {
+      affected_rows
+      returning {
+        to_id
+      }
+    }
+  }
+`
+interface ShortlistItem {
+  to_id: string
+}
+
+interface MutationResponse {
+  update_contact_connection: {
+    affected_rows: number
+    returning: ShortlistItem[]
+  }
+}
+
+interface MutationVariables {
+  from_id: string
+  to_id: string
+}
+
+const removeShortlist = useGqlMutation<MutationResponse, MutationVariables>(
+  REMOVE_SHORTLIST,
+  {
+    onSuccess: (data, variables) => {
+      queryClient.invalidateQueries('myShortlist')
+      console.log(`🚀 ~ mutation variables`, variables)
+      console.log(`🚀 ~ mutation data`, data)
+    },
+  },
+)
 ```

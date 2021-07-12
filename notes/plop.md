@@ -2,7 +2,9 @@
 title: Plop
 link: https://github.com/plopjs/plop
 created: 2020-10-19T14:01:20.000Z
-modified: 2021-07-10T07:43:36.638Z
+modified: 2021-07-12T05:58:17.639Z
+tags:
+  - devops
 ---
 
 ## `plopfile.js`
