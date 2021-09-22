@@ -24,6 +24,7 @@ fish
 
 http://fishshell.com/docs/current/tutorial.html
 https://github.com/jorgebucaran/fish-cookbook
+https://github.com/ghaiklor/iterm-fish-fisher-osx
 
 ## Functions
 
@@ -51,4 +52,12 @@ https://github.com/jorgebucaran/fisher
 
 ```
 fisher self-update
+```
+
+## ssh-agent
+
+When needing to add ssh keys to Github, [the docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent) suggest running `eval "$(ssh-agent -s)"` but that does not work in fish. Run this instead:
+
+```sh
+command ssh-agent -s
 ```
