@@ -2,10 +2,8 @@
 title: Coding standards
 emoji: ✅
 created: 2020-03-18T17:40:43.000Z
-modified: 2020-04-17T15:55:11.000Z
+modified: 2021-11-11T12:07:27.561Z
 ---
-
-#### toc
 
 ## Naming Conventions
 
@@ -19,14 +17,14 @@ The objective of this document is to help when naming things and make the codeba
 
 ### File Names
 
-| Name               | Convention                                      | Example              |
-| :----------------- | :---------------------------------------------- | :------------------- |
-| Index file         | `index.(ts|js)`                                 | `index.ts`           |
-| React component    | `ComponentName.(tsx|ts|js|jsx)`                 | `Button.tsx`         |
-| Test file          | `ComponentName.test.(tsx|ts|js|jsx)`            | `Button.test.tsx`    |
-| TypeScript types   | `File.models.ts`                                | `Button.models.ts`   |
-| Styles (CSS-in-JS) | `ComponentName.styles.(ts|js)`                  | `Button.styles.ts`   |
-| Storybook          | `ComponentName.stor(ies|y).(tsx|ts|js|jsx|mdx)` | `Button.stories.tsx` |
+| Name               | Convention                | Example            |
+| :----------------- | :------------------------ | :----------------- | ------------------ | ----- | ----------------- | ----- | -------------------- |
+| Index file         | `index.(ts                | js)`               | `index.ts`         |
+| React component    | `ComponentName.(tsx       | ts                 | js                 | jsx)` | `Button.tsx`      |
+| Test file          | `ComponentName.test.(tsx  | ts                 | js                 | jsx)` | `Button.test.tsx` |
+| TypeScript types   | `File.models.ts`          | `Button.models.ts` |
+| Styles (CSS-in-JS) | `ComponentName.styles.(ts | js)`               | `Button.styles.ts` |
+| Storybook          | `ComponentName.stor(ies   | y).(tsx            | ts                 | js    | jsx               | mdx)` | `Button.stories.tsx` |
 
 ### HTML
 

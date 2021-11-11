@@ -2,6 +2,7 @@
 title: useToggle React Hook
 tags:
   - react
+emoji: ⚛
 created: 2021-07-12T06:06:50.377Z
 modified: 2021-07-12T06:07:21.645Z
 ---

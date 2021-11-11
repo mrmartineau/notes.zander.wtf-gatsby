@@ -1,0 +1,50 @@
+import { Story, Canvas } from '@storybook/addon-docs'
+import { Button } from './Button'
+
+# Button
+
+This button component extends Theme UI's `Button` and add some more props/functionality. It takes all standard `<button>` attributes e.g. `disabled`, `type` etc etc **AND** also Theme UI's props like `variant` and `sx`
+
+```js
+import { Button } from './components'
+```
+
+## Basic button
+
+```tsx
+<Button>Click me</Button>
+<Button type="submit">Click me</Button>
+<Button disabled>Click me</Button>
+<Button onClick={() => console.log('clicked')}>Click me</Button>
+```
+
+## With loading state
+
+```tsx
+<Button isLoading={true}>Click me</Button>
+```
+
+## Inclusive/accessible disabled state
+
+Using the guidelines from https://css-tricks.com/making-disabled-buttons-more-inclusive/, this button will show a simple tooltip if the form state is not ready. Instead of passing `disabled=true` to the button, use the `isDisabled` & `disabledText` props.
+
+```tsx
+<Button
+  isDisabled={true}
+  disabledText="You must select a meeting for all trainees"
+>
+  Request meetings
+</Button>
+```
+
+## Icon buttons
+
+If you need an icon button, do not use this `Button` component. Instead, use the `IconButton` component from `theme-ui`, like so:
+
+```tsx
+import { IconButton } from 'theme-ui'
+import { IconPicker } from '../components'
+;<IconButton>
+  <IconPicker icon="exclamation" />
+</IconButton>
+```

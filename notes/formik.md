@@ -4,7 +4,8 @@ tags:
   - react
   - typescript
 link: https://formik.org/docs/overview
-modified: 2021-07-10T07:22:26.268Z
+emoji: ⚛
+modified: 2021-11-11T12:25:28.505Z
 ---
 
 ## Simple example
@@ -104,5 +105,99 @@ const InviteSchema = Yup.object().shape({
   password: Yup.string().required('Required').min(8).max(200),
   firstName: Yup.string().required('Required'),
   lastName: Yup.string(),
+})
+```
+
+## Common patterns
+
+### Loading state
+
+Use the `useToggle` hook to manipulate loading state for your form. When used correctly, the `Button` component will show a loading indicator when the form is submitting.
+
+```tsx
+// initialise the state
+const [formSubmitting, , setFormSubmitting] = useToggle()
+
+// change it when the user submits the form
+onSubmit={async (values: FormValues) => {
+  setFormSubmitting(true) // <-- here
+  try {
+    // call your API to submit the form
+  } catch (error: unknown) {
+    // catch any errors
+    let errorMessage = 'error.unknown'
+    if (typeof error === 'string') {
+      errorMessage = error.toUpperCase()
+    } else if (error instanceof Error) {
+      errorMessage = error.message
+    }
+    setFormError(errorMessage)
+    setFormSubmitting(false) // <-- here
+  }
+}}
+
+// use it on the button
+<Button
+  type="submit"
+  isLoading={formSubmitting}
+>
+  Submit
+</Button>
+```
+
+### Submission errors
+
+Use a `useState` hook to set any errors that occur during form validation.
+
+```tsx
+// initialise the state
+const [formError, setFormError] = useState<string>('')
+
+// set the error when the form is submitted
+onSubmit={async (values: FormValues) => {
+  setFormSubmitting(true)
+  try {
+    // call your API to submit the form
+  } catch (error: unknown) {
+    // catch any errors
+    let errorMessage = 'error.unknown'
+    if (typeof error === 'string') {
+      errorMessage = error.toUpperCase()
+    } else if (error instanceof Error) {
+      errorMessage = error.message
+    }
+    setFormError(errorMessage) // <-- here
+    setFormSubmitting(false)
+  }
+}}
+
+// Render a message if there are errors
+{formError && <Alert variant="error">{formError}</Alert>}
+```
+
+Another aspect is to "disable" the submit button when there are validation errors. Use the `isValid` prop from Formik to determine if the form is valid, then set the `isDisabled` prop on the `Button` component. This will prevent the button from being clicked and show a useful message to the user notifying them of the issue.
+
+```tsx
+<Button
+  type="submit"
+  sx={{ mt: 2 }}
+  isLoading={formSubmitting}
+  isDisabled={!isValid}
+  disabledText="Please fix the form validation errors"
+>
+  Submit
+</Button>
+```
+
+### Validation
+
+Use the `Yup` library to validate the form. It is used in many forms in the app.
+
+Create your form schema:
+
+```ts
+const FormSchema = Yup.object().shape({
+  email: Yup.string().email('Invalid email').required('Required'),
+  password: passwordValidation,
 })
 ```
