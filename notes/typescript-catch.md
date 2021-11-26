@@ -3,7 +3,7 @@ title: TypeScript catch block errors
 tags:
   - typescript
 created: 2021-11-21T20:06:11.062Z
-modified: 2021-11-21T20:06:11.062Z
+modified: 2021-11-26T13:42:11.062Z
 link: https://kentcdodds.com/blog/get-a-catch-block-error-message-with-typescript
 ---
 
@@ -91,3 +91,5 @@ try {
   reportError({ message: errorMessage })
 }
 ```
+
+Some very detailed info can be found at https://joefallon.net/2018/09/typescript-try-catch-finally-and-custom-errors/
