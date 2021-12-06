@@ -15,13 +15,15 @@ This example does not extract logic from the catch block
 try {
   // something that might throw
 } catch (error: unknown) {
-  if (error instanceof Error) return error.message
-  return String(error)
   // do something with the error message
+  if (error instanceof Error) {
+    return error.message
+  }
+  return String(error)
 }
 ```
 
-## Simple example
+## Extract the error handling logic
 
 ```ts
 const getErrorMessage = (error: unknown) => {

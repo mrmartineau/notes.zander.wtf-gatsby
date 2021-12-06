@@ -133,6 +133,27 @@ axios({
 
 [Read more here](https://github.com/axios/axios#handling-errors)
 
+### With Typescript
+
+```ts
+try {
+  await axios.post(
+    '/user/12345',
+    {
+      email: formData.email,
+    }
+  )
+} catch (error: unknown) {
+  if (axios.isAxiosError(error)) {
+    // you now have type-safe access to the API response that returned the error
+    console.error(error.response)
+  } else {
+    const errorMessage = getErrorMessage(error)
+    setFormError(errorMessage)
+  }
+}
+```
+
 ## Redaxios
 
 The Axios API, as an 800 byte Fetch wrapper.
