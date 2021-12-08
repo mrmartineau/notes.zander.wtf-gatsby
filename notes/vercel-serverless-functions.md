@@ -38,3 +38,7 @@ const handler: VercelApiHandler = (request, response) => {
 
 export default handler;
 ```
+
+## Enabling CORS
+
+https://vercel.com/support/articles/how-to-enable-cors
