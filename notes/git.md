@@ -178,6 +178,8 @@ git reset --hard HEAD~1
 
 ## Config
 
+Run the command `git config --global -e` to edit the global config
+
 ### Default branch
 
 In Git 2.28, a new configuration option, `init.defaultBranch` is being introduced to replace `master`, the previous default.
@@ -186,12 +188,45 @@ In Git 2.28, a new configuration option, `init.defaultBranch` is being introduce
 git config --global init.defaultBranch main
 ```
 
-### diff3 diff format
+Or add the following to your global config:
+
+```
+[init]
+  defaultBranch = main
+```
+
+### Make VS Code your default Git Editor, Diff Tool, or Merge Tool
+
+Add the following to your global config:
+
+```
+[core]
+  editor = code --wait
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+```
+
+[More info](https://www.roboleary.net/vscode/2020/09/15/vscode-git.html)
+
+### `diff3` diff format
 
 Use the **diff3** format to see common ancestor code in conflict blocks
 
 ```sh
 git config --global merge.conflictstyle diff3
+```
+
+Or add the following to your global config:
+
+```
+[merge]
+  conflictstyle = diff3
 ```
 
 and then conflict blocks will be formatted like:
