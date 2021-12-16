@@ -4,7 +4,7 @@ tags:
   - cheatsheet
   - git
 created: 2020-02-27T23:02:00.000Z
-modified: 2020-12-29T17:17:21.000Z
+modified: 2021-12-16T16:17:26.000Z
 ---
 
 ## Staging/Adding files
@@ -245,7 +245,7 @@ where the default conflict block has been extended with a new section, delimited
 
 Comparing the HEAD block to the common ancestor block will often reveal the nature of the target-branch changes, allowing a straight-forward resolution.
 
-For instance, breath easy if the common ancester block is empty:
+For instance, breathe easy if the common ancester block is empty:
 
 ```sh
 <<<<<<<< HEAD:path/to/file
