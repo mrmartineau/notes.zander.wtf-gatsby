@@ -214,24 +214,24 @@ Add the following to your global config:
 
 [More info](https://www.roboleary.net/vscode/2020/09/15/vscode-git.html)
 
-### `diff3` diff format
+### `zdiff3` diff format
 
-Use the **diff3** format to see common ancestor code in conflict blocks
+Use the **diff3** format to see common ancestor code in conflict blocks. Added in Git 2.35.
 
 ```sh
-git config --global merge.conflictstyle diff3
+git config --global merge.conflictstyle zdiff3
 ```
 
 Or add the following to your global config:
 
 ```
 [merge]
-  conflictstyle = diff3
+  conflictstyle = zdiff3
 ```
 
 and then conflict blocks will be formatted like:
 
-```sh
+```diff
 <<<<<<<< HEAD:path/to/file
 content from target branch
 |||||||| merged common ancestors:path/to/file
@@ -241,13 +241,13 @@ content from your working branch
 >>>>>>> Commit message:path/to/file
 ```
 
-where the default conflict block has been extended with a new section, delimited by |||||||| and ========, which reveals the common ancester code.
+where the default conflict block has been extended with a new section, delimited by `||||||||` and `========`, which reveals the common ancester code.
 
-Comparing the HEAD block to the common ancestor block will often reveal the nature of the target-branch changes, allowing a straight-forward resolution.
+Comparing the `HEAD` block to the common ancestor block will often reveal the nature of the target-branch changes, allowing a straight-forward resolution.
 
 For instance, breathe easy if the common ancester block is empty:
 
-```sh
+```diff
 <<<<<<<< HEAD:path/to/file
 content from target branch
 |||||||| merged common ancestors:path/to/file
@@ -258,7 +258,7 @@ content from your working branch
 
 as this means both branches have added lines; they haven’t tried to update the same lines. You can simply delete the merge conflict markers to resolve.
 
-[More info](https://codeinthehole.com/guides/resolving-conflicts-during-a-git-rebase/)
+[More info](https://git-scm.com/docs/git-config#Documentation/git-config.txt-mergeconflictStyle)
 
 ---
 
