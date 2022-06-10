@@ -4,7 +4,7 @@ tags:
   - cheatsheet
   - git
 created: 2020-02-27T23:02:00.000Z
-modified: 2020-12-29T17:17:21.000Z
+modified: 2021-12-16T16:17:26.000Z
 ---
 
 ## Staging/Adding files
@@ -178,6 +178,8 @@ git reset --hard HEAD~1
 
 ## Config
 
+Run the command `git config --global -e` to edit the global config
+
 ### Default branch
 
 In Git 2.28, a new configuration option, `init.defaultBranch` is being introduced to replace `master`, the previous default.
@@ -186,17 +188,50 @@ In Git 2.28, a new configuration option, `init.defaultBranch` is being introduce
 git config --global init.defaultBranch main
 ```
 
-### diff3 diff format
+Or add the following to your global config:
 
-Use the **diff3** format to see common ancestor code in conflict blocks
+```
+[init]
+  defaultBranch = main
+```
+
+### Make VS Code your default Git Editor, Diff Tool, or Merge Tool
+
+Add the following to your global config:
+
+```
+[core]
+  editor = code --wait
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+```
+
+[More info](https://www.roboleary.net/vscode/2020/09/15/vscode-git.html)
+
+### `zdiff3` diff format
+
+Use the **diff3** format to see common ancestor code in conflict blocks. Added in Git 2.35.
 
 ```sh
-git config --global merge.conflictstyle diff3
+git config --global merge.conflictstyle zdiff3
+```
+
+Or add the following to your global config:
+
+```
+[merge]
+  conflictstyle = zdiff3
 ```
 
 and then conflict blocks will be formatted like:
 
-```sh
+```diff
 <<<<<<<< HEAD:path/to/file
 content from target branch
 |||||||| merged common ancestors:path/to/file
@@ -206,13 +241,13 @@ content from your working branch
 >>>>>>> Commit message:path/to/file
 ```
 
-where the default conflict block has been extended with a new section, delimited by |||||||| and ========, which reveals the common ancester code.
+where the default conflict block has been extended with a new section, delimited by `||||||||` and `========`, which reveals the common ancester code.
 
-Comparing the HEAD block to the common ancestor block will often reveal the nature of the target-branch changes, allowing a straight-forward resolution.
+Comparing the `HEAD` block to the common ancestor block will often reveal the nature of the target-branch changes, allowing a straight-forward resolution.
 
-For instance, breath easy if the common ancester block is empty:
+For instance, breathe easy if the common ancester block is empty:
 
-```sh
+```diff
 <<<<<<<< HEAD:path/to/file
 content from target branch
 |||||||| merged common ancestors:path/to/file
@@ -223,7 +258,7 @@ content from your working branch
 
 as this means both branches have added lines; they haven’t tried to update the same lines. You can simply delete the merge conflict markers to resolve.
 
-[More info](https://codeinthehole.com/guides/resolving-conflicts-during-a-git-rebase/)
+[More info](https://git-scm.com/docs/git-config#Documentation/git-config.txt-mergeconflictStyle)
 
 ---
 

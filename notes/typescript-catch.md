@@ -3,7 +3,7 @@ title: TypeScript catch block errors
 tags:
   - typescript
 created: 2021-11-21T20:06:11.062Z
-modified: 2021-11-21T20:06:11.062Z
+modified: 2021-12-06T15:20:48.665Z
 link: https://kentcdodds.com/blog/get-a-catch-block-error-message-with-typescript
 ---
 
@@ -15,13 +15,15 @@ This example does not extract logic from the catch block
 try {
   // something that might throw
 } catch (error: unknown) {
-  if (error instanceof Error) return error.message
-  return String(error)
   // do something with the error message
+  if (error instanceof Error) {
+    return error.message
+  }
+  return String(error)
 }
 ```
 
-## Simple example
+## Extract the error handling logic
 
 ```ts
 const getErrorMessage = (error: unknown) => {
@@ -91,3 +93,5 @@ try {
   reportError({ message: errorMessage })
 }
 ```
+
+Some very detailed info can be found at https://joefallon.net/2018/09/typescript-try-catch-finally-and-custom-errors/

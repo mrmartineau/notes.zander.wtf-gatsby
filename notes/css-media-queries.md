@@ -2,7 +2,7 @@
 title: CSS Media Queries
 tags:
   - css
-link: 'https://blog.logrocket.com/new-media-queries-you-need-to-know/'
+link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/@media'
 emoji: ↔️
 created: 2020-04-28T22:03:21.000Z
 modified: 2020-06-11T14:47:15.000Z
@@ -160,3 +160,57 @@ The value is boolean, so `no-preference` and `reduce` are the values.
 ```
 
 [Read more at MDN.](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-data)
+
+
+### pointer
+
+The pointer CSS media feature tests whether the user has a pointing device (such as a mouse), and if so, how accurate the primary pointing device is.
+
+Possible values are `coarse`, `fine` or `none`.
+
+```css
+@media (pointer: coarse) {
+  .hero-image {
+    background-image: none;
+    background-color: salmon;
+  }
+}
+```
+
+[Read more at MDN.](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/pointer)
+
+### hover and any-hover
+
+The `hover` CSS media feature can be used to test whether the user's primary input mechanism can hover over elements. The `any-hover` CSS media feature can be used to test whether any available input mechanism can hover over elements.
+
+```css
+@media (hover: none) {
+  /* do something when hover *IS NOT* available */
+}
+
+.cta {
+}
+
+@media (hover: hover) {
+  /* do something when hover *IS* available */
+  .cta:hover {
+  }
+}
+```
+
+If you'd like the query to be slightly broader to test if any available input can hover you can use the any-hover query instead.
+
+This will apply to devices that allow for both touch and the connection of a pointer device like a mouse.
+
+```css
+.cta {
+}
+
+@media (any-hover: hover) {
+  /* do something when hover *IS* available */
+  .cta:hover {
+  }
+}
+```
+
+[Read more at MDN.](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover)

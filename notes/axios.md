@@ -5,7 +5,7 @@ tags:
   - javascript
 link: https://github.com/axios/axios
 created: 2020-02-27T23:02:00.000Z
-modified: 2021-04-22T17:49:48.665Z
+modified: 2021-12-06T15:30:48.665Z
 ---
 
 ## Example requests
@@ -132,6 +132,27 @@ axios({
 ```
 
 [Read more here](https://github.com/axios/axios#handling-errors)
+
+### With Typescript
+
+```ts
+try {
+  await axios.post(
+    '/user/12345',
+    {
+      email: formData.email,
+    }
+  )
+} catch (error: unknown) {
+  if (axios.isAxiosError(error)) {
+    // you now have type-safe access to the API response that returned the error
+    console.error(error.response)
+  } else {
+    const errorMessage = getErrorMessage(error)
+    setFormError(errorMessage)
+  }
+}
+```
 
 ## Redaxios
 

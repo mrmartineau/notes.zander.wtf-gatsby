@@ -2,6 +2,7 @@
 title: Storybook
 tags:
   - testing
+  - storybook
 emoji: 📖
 link: 'https://storybook.js.org'
 created: 2020-02-27T23:02:00.000Z
