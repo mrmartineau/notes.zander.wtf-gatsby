@@ -6,7 +6,7 @@ tags:
   - testing
 emoji: 🧪
 created: 2020-02-27T23:02:00.000Z
-modified: 2020-03-26T23:06:06.000Z
+modified: 2022-06-10T10:38:49Z
 ---
 
 ## Basic test skeleton
@@ -26,32 +26,14 @@ describe('Given a xxx', () => {
 })
 ```
 
-### Snapshot test
+### Use Jest globals
 
 ```js
-import React from 'react'
-import { render } from '@testing-library/react'
+import { expect, test } from '@jest/globals'
 
-import { Button } from './Button'
-
-describe('Given a Button', () => {
-  describe('when it is rendered', () => {
-    it('should match the snapshot', () => {
-      const { container } = render(<Button />)
-
-      expect(container.firstChild).toMatchSnapshot()
-    })
-  })
+test('two plus two is four', () => {
+  expect(2 + 2).toBe(4)
 })
-
-// with snapshot-diff
-const { getByText, asFragment } = render(<TestComponent />)
-const firstRender = asFragment()
-fireEvent.click(getByText(/Click to increase/))
-// This will snapshot only the difference between the first render, and the
-// state of the DOM after the click event.
-// See https://github.com/jest-community/snapshot-diff
-expect(firstRender).toMatchDiffSnapshot(asFragment())
 ```
 
 ### Throw
@@ -59,23 +41,12 @@ expect(firstRender).toMatchDiffSnapshot(asFragment())
 ```js
 import { formatDate } from './formatDate'
 
-describe('Given a formatDate util', () => {
-  describe('when passing a valid 8-digit date string', () => {
-    test('it should return a valid ISO formatted date string', () => {
-      expect(formatDate('19790118')).toBe('1979-01-18T00:00:00.000Z')
-    })
-  })
-
-  describe('when passing an invalid string', () => {
-    test('it should throw', () => {
-      expect(() => formatDate('197901180')).toThrow(
-        'Date string wrong format/length'
-      )
-
-      expect(() => formatDate('abcdefgh')).toThrow(
-        'Date string must be only digits'
-      )
-    })
-  })
+test('it should throw', () => {
+  expect(() => formatDate('197901180')).toThrow(
+    'Date string wrong format/length',
+  )
+  expect(() => formatDate('abcdefgh')).toThrow(
+    'Date string must be only digits',
+  )
 })
 ```

@@ -2,7 +2,7 @@
 title: Coding standards
 emoji: ✅
 created: 2020-03-18T17:40:43.000Z
-modified: 2021-11-11T12:07:27.561Z
+modified: 2022-06-09T10:38:49Z
 ---
 
 ## Naming Conventions
@@ -180,41 +180,25 @@ Components should be grouped into folders logically. If they are only used once 
 
 #### Example:
 
-```
-/src/client/components
-    /ParentComponent
-        index.ts
-        ParentComponent.story.ts
-        ParentComponent.styles.ts
-        README.md
-        /ChildComponent
-            ChildComponent.tsx
-            ChildComponent.models.ts
-            ChildComponent.styles.ts
-            ChildComponent.test.tsx
-            ChildComponent.validate.ts
-        /OtherChildComponent
-          index.ts
-          OtherChildComponent.tsx
-          OtherChildComponent.test.tsx
-        README.md
-    /ReusableComponent
-        index.ts
-        README.md
-        ReusableComponent.tsx
-        ReusableComponent.story.ts
-        ReusableComponent.test.tsx
-    /SomeOtherComponentOnlyUsedOnce
-        index.ts
-        README.md
-        SomeOtherComponentOnlyUsedOnce.tsx
-        SomeOtherComponentOnlyUsedOnce.story.ts
-        SomeOtherComponentOnlyUsedOnce.test.tsx
+```js
+components/
+├─ ComponentName/
+│  ├─ __tests__/
+│  │  ├─ ComponentNameView.spec.tsx
+│  │  ├─ ComponentNameContainer.spec.tsx
+│  ├─ ComponentName.operations.middleware.gql // Graphql queries
+│  ├─ ComponentName.messages.ts // i18n content
+│  ├─ ComponentName.models.ts // TS types
+│  ├─ ComponentNameView.tsx // "dumb" React component
+│  ├─ ComponentNameView.stories.tsx // Storybook stories
+│  ├─ ComponentNameContainer.tsx // "smart" React component. fetches data etc
+│  ├─ index.ts
+│  ├─ README.md
 ```
 
 #### 👩🏻‍🏫 **Storybook**
 
-Components should be built and tested with a `ComponentName.story.tsx` and have a `README.md` file included.
+Components should be built and tested with a `ComponentName.stories.tsx` and have a `README.md` file included.
 
 #### 👩🏻‍🔬 **Test**
 
