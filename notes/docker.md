@@ -4,7 +4,7 @@ emoji: 🐳
 tags:
   - devops
 created: 2020-02-27T23:02:00.000Z
-modified: 2020-12-29T10:31:32.000Z
+modified: 2022-09-22T13:31:32.000Z
 ---
 
 ## Best practices
