@@ -2,8 +2,8 @@
 title: Pluralisation with inflect()
 tags:
   - javascript
-created: 2021-11-21T22:22:11.062Z
-modified: 2021-11-21T22:22:11.062Z
+created: 2022-11-11T13:25:54.000Z
+modified: 2022-11-11T13:25:54.000Z
 link: https://kyleshevlin.com/snippets/inflect
 ---
 
