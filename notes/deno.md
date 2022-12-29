@@ -16,7 +16,7 @@ Deno can import modules from any location on the web, like GitHub, a personal we
 
 ## Examples
 
-### [deno.land](https://deno.land)
+### [deno.land](https://deno.land/x)
 
 ```ts
 import { serve } from 'https://deno.land/std@0.131.0/http/server.ts'
@@ -35,7 +35,7 @@ import type { SupabaseClient } from 'https://esm.sh/@supabase/supabase-js@2.1.1'
 import urlJoin from 'https://cdn.skypack.dev/pin/proper-url-join@v2.1.1-SID2RKzIsZDaP6lwi1ZT/mode=imports,min/optimized/proper-url-join.js'
 ```
 
-### npm
+### [npm](https://deno.land/manual@v1.29.1/node)
 
 ```ts
 import chalk from 'npm:chalk@5'
