@@ -3,7 +3,7 @@ title: Deno
 tags:
   - deno
 created: 2022-11-26T00:21:36:00Z
-modified: 2022-11-26T00:21:36:00Z
+modified: 2022-12-29T00:15:19:00Z
 link: https://deno.land
 emoji: ⚡
 ---
