@@ -81,11 +81,11 @@ modified: 2022-12-29T08:15:00.000Z
 | `border-bottom-left-radius`  | `border-end-start-radius`   |
 | `border-bottom-right-radius` | `border-end-end-radius`     |
 
-| Classical Property                                                 | Logical Property           |
-| ------------------------------------------------------------------ | -------------------------- |
-| `margin-left: auto;`<br>`margin-right: auto;`                      | `margin-inline: auto;`     |
-| `margin-top: 0;`<br>`margin-bottom: 0;`                            | `margin-block: 0;`         |
-| `margin-top: 1rem;`<br>`margin-bottom: 2rem;`                      | `margin-block: 1rem 2rem;` |
-| `top: 2rem;`<br>`right: 2rem;`<br>`bottom: 2rem;`<br>`left: 2rem;` | `inset: 2rem;`             |
-| `right: 2rem;`<br>`left: 2rem;`                                    | `inset-inline: 2rem;`      |
-| `top: 2rem;`<br>`bottom: 2rem;`                                    | `inset-block: 2rem;`       |
+| Classical Property                                                    | Logical Property           |
+| --------------------------------------------------------------------- | -------------------------- |
+| `margin-left: auto;`<br/>`margin-right: auto;`                        | `margin-inline: auto;`     |
+| `margin-top: 0;`<br/>`margin-bottom: 0;`                              | `margin-block: 0;`         |
+| `margin-top: 1rem;`<br/>`margin-bottom: 2rem;`                        | `margin-block: 1rem 2rem;` |
+| `top: 2rem;`<br/>`right: 2rem;`<br/>`bottom: 2rem;`<br/>`left: 2rem;` | `inset: 2rem;`             |
+| `right: 2rem;`<br/>`left: 2rem;`                                      | `inset-inline: 2rem;`      |
+| `top: 2rem;`<br/>`bottom: 2rem;`                                      | `inset-block: 2rem;`       |
